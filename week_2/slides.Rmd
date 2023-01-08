@@ -1,0 +1,566 @@
+---
+title: "Introduction to coding with R"
+subtitle: "Part I"
+author: "Joselyn Chávez"
+date: "01/10/2023"
+output:
+  xaringan::moon_reader:
+    css: ["epi.css"]
+    nature:
+      self-contained: true
+
+---
+```{r xaringanExtra-clipboard, echo=FALSE}
+xaringanExtra::use_clipboard()
+```
+
+# Let's recap
+
+- R and RStudio
+- RStudio panels
+- What do we do in the console?
+- How to create a script?
+- Where to visualize existing variables?
+- How to read/import a table?
+- How to visualize the table?
+- How to write/export a table?
+
+---
+# Data structures in R
+
+- Vectors
+- Matrices
+- Data frames
+- Lists
+- Functions
+
+---
+# Choosing a good variable name
+
+- Be clear and concise.
+- Preferably using lowercase.
+- Not contain special characters. Avoid dieresis and other accents (é, è, â, î or ô, tilde ñ, ü or ï)
+- Use _ or Upper/Lower case to separate words, never space.
+- Avoid  conflict with any base R keywords (True, False, and, if, or else or other function names)
+
+---
+# Let's try
+
+What of these variable names follow good practices?
+
+a) MY_FIRST_VARIABLE
+
+b) OxygenLevel
+
+c) patient_name
+
+d) final.value
+
+e) mean
+
+---
+class: chapter-slide
+
+# Vectors
+
+---
+
+# Creating a vector
+
+## Using the assignment operator
+
+For one value
+
+```{r}
+my_vector <- 10
+my_vector <- "a"
+```
+
+---
+## Using the combine function
+
+For two or more values
+
+```{r}
+my_vector <- c(1,10,25,30)
+my_vector
+
+my_vector <- c("a","b","c")
+my_vector
+```
+
+---
+# Let's practice
+
+- Create a variable called vector_1 that contains the number 500
+- Create a variable called vector_2 that contains the numbers 1:500 
+- Create a variable called vector_3 that contains the letters "a" to "e"
+- Create a variable called vector_4 that contains your name, age, and the city where you were born.
+
+---
+## Using the seq() function
+
+```{r}
+my_vector <- seq(1:10)
+my_vector
+
+my_vector <- seq(from = 0, to = 10, by = 2)
+my_vector
+```
+
+- Write a vector with the numbers 1 to 500 in steps of 10
+
+---
+# Vector features
+
+- Vectors have only one dimension (length)
+
+```{r}
+my_vector <- c(1,2,3,4)
+length(my_vector)
+```
+
+---
+- All vector components must be the same type
+
+    - Numeric
+    - Integer
+    - Double
+    - Character
+    - Factor
+    - Logical
+
+---
+- Numeric
+```{r}
+x_num <- c(1, 2, 3)
+class(x_num)
+```
+
+--
+- Integer
+```{r}
+x_int <- c(1L, 2L, 3L)
+class(x_int)
+```
+
+---
+- Double
+```{r}
+x_dbl <- c(1, 2.5, 3.1)
+typeof(x_dbl)
+```
+
+--
+- Character
+```{r}
+x_chr <- c("a", "chair", "the window")
+class(x_chr)
+```
+
+---
+- Factor
+```{r}
+x_fct <- factor("mouse_a","mouse_b","mouse_c")
+class(x_fct)
+```
+
+--
+- Logical
+```{r}
+x_log <- c(TRUE, FALSE, TRUE)
+class(x_log)
+```
+
+---
+
+- R finds a way to unify data type when there is more than one per vector
+
+```{r}
+x <- c(1, "a", TRUE)
+x
+class(x)
+```
+
+What will be the class of these vectors?
+
+y <- c(5, 7, "airplanes")
+
+z <- c(10, 30.5, TRUE)
+
+---
+## Converting one class to another using as. functions
+
+```{r}
+x <- c(1.9, 2, 0, 0)
+class(x)
+
+as.double(x)
+
+as.integer(x)
+```
+
+---
+## Converting one class to another using as. functions
+
+```{r}
+as.character(x)
+as.factor(x)
+as.logical(x)
+```
+
+---
+# Missing values
+
+- NA
+
+```{r}
+x <- c(1, "a", TRUE, NA)
+x
+```
+
+- NaN
+
+```{r,warning=FALSE}
+x <- c(10, -1, NA)
+log(x)
+```
+
+---
+class: chapter-slide
+
+# How do we access the vector elements?
+
+---
+## Using an integer as index
+
+Vector index in R starts at 1
+
+```{r}
+x <- c(10,20,30,40,50)
+x
+
+x[3] # Extract the third element
+```
+
+---
+```{r}
+x <- c(10,20,30,40,50)
+
+# Extract index from 3 to 5
+x[3:5]
+```
+
+--
+```{r}
+x <- c("a","b","c","d","e")
+
+# Extract index 2 and 5
+x[c(2,5)] 
+```
+
+---
+# Let's practice
+
+- Create a vector with numbers 50 to 100 in steps of 5. Extract the first 7 numbers. Extract the last 8 numbers
+- Create a vector with letters "a" to "k". Extract the letters c,d and j
+
+---
+
+## Using the name as index
+
+```{r}
+x <- c(1,3,10)
+names(x)
+```
+--
+
+```{r}
+x <- c("number_a" = 10, "number_b" = 50, "number_c" = 100)
+x
+names(x)
+```
+
+---
+
+```{r}
+x <- c(10, 50, 100)
+
+names(x) <- c("number_a", "number_b", "number_c")
+x
+```
+
+--
+```{r}
+x["number_b"]
+x[c("number_a","number_c")]
+```
+
+---
+
+## Using logical evaluation as index
+
+```{r}
+
+x <- seq(1:10)
+x
+
+x < 5
+
+x[x < 5]
+```
+
+---
+
+```{r}
+
+x <- c("a","a","b","c","c","c")
+
+x == "c"
+
+x[x == "c"]
+```
+
+---
+## Your turn!
+
+The following vector shows the temperature in New York during the last week:
+
+```{r}
+temperature_nyc <- c("Monday" = 55,
+                     "Tuesday" = 55,
+                     "Wednesday" = 66,
+                     "Thursday" = 50,
+                     "Friday" = 48,
+                     "Saturday" = 45,
+                     "Sunday" = 47)
+```
+
+- Select the temperatures from the first 3 days.
+- Select the temperatures from Tue, Thu and Sat.
+- What days registered temperatures above the mean?
+
+---
+## How to modify a vector?
+
+- Adding a new element
+
+```{r}
+x <- c("a","b","c")
+x
+
+x[4] <- "d"
+x
+```
+
+---
+- Removing an element
+
+```{r}
+x
+x[-2]
+x <- x[-2]
+x
+```
+
+---
+## Your turn!
+
+Using the vector:
+```{r}
+fruits <- c("apples" = 1, 
+            "cherries" = 10,
+            "mangos" = 7) 
+```
+
+- Add a new fruit to the vector
+- Remove the cherries
+
+---
+- Replacing an element by index
+
+```{r}
+x
+x[1] <- "m"
+x
+```
+
+---
+- Replacing an element by logical evaluation
+
+```{r}
+x
+x[x == "d"] <- "e"
+x
+```
+
+---
+
+## Excercise
+
+Using the vector:
+```{r}
+fruits <- c("apples" = 1, 
+            "cherries" = 10,
+            "mangos" = 7) 
+```
+
+- Select all fruits with values bigger than 5
+- Replace the apples number with 4
+
+---
+class: chapter-slide
+
+# Matrices
+
+---
+
+# Creating a matrix
+
+Matrices are objects with elements arranged in a two-dimensional layout.
+
+```{r}
+my_matrix <- matrix(data = 1:12, nrow = 4)
+my_matrix
+```
+
+- rows and columns
+- All elements must be the same type
+
+---
+```{r}
+my_matrix <- matrix(data = 1:12, ncol = 4)
+my_matrix
+```
+
+---
+class: chapter-slide
+
+# Operations with matrices
+
+---
+
+## Arithmetic operations
+
+```{r}
+my_matrix + 10
+my_matrix * 2
+```
+
+---
+## Arithmetic operations
+
+```{r}
+matrix1 <- matrix(1:6, nrow = 2, ncol = 3)
+matrix2 <- matrix(7:12, nrow = 2, ncol = 3)
+```
+
+.pull-left[
+```{r}
+matrix1
+matrix2
+```
+]
+.pull-right[
+```{r}
+matrix1 + matrix2
+```
+]
+
+---
+# Your turn!
+
+- Create a matrix with numbers 101:125, arrange them in 5 rows. 
+- Add 10 units, then multiply by 3
+
+---
+## How do we access matrices elements?
+
+```{r}
+matrix1 <- matrix(101:125, nrow = 5)
+matrix1
+matrix1[1:7]
+```
+
+---
+## How do we access matrices elements?
+
+```{r}
+matrix1[1,2]
+```
+
+```{r}
+matrix1[1:2,1:2]
+```
+
+---
+# Your turn!
+
+- How would you select the number 120 from the matrix?
+- How would you select the last two columns?
+
+---
+class: chapter-slide
+
+# Some extra information about packages
+
+---
+## Two main repositories
+
+### CRAN
+
+- More than 19000 packages 
+- Topics: Statistics, machine learning, plotting, economy, spatial data, databases, phylogenetics, natural language processing, ...
+- https://cran.rstudio.com > Packages
+
+- How do we install packages from CRAN?
+
+```{r, eval=FALSE}
+install.packages("ggplot2")
+```
+
+---
+## Two main repositories
+
+### Bioconductor
+
+- Software, Annotation, and Experiment packages
+- 2183 software packages
+- https://bioconductor.org
+
+- How do we install packages from Bioconductor?
+
+```{r, eval=FALSE}
+install.packages("BiocManager")
+BiocManager::install("Biostrings")
+```
+
+---
+## Installing packages from the source 
+
+- Main source of code: GitHub
+- Under development packages, small packages, in preparation for submitting to CRAN or Bioconductor...
+
+
+- How do we install packages from GitHub?
+
+```{r, eval=FALSE}
+install.packages("remotes")
+remotes::install_github("nstrayer/datadrivencv")
+```
+
+---
+
+.pull-left[<br><br><br><br><br><br><br>
+.center[
+# Thanks!
+]
+]
+
+.pull-right[<br><br><br><br>
+```{r,echo=FALSE,out.width='100%',fig.align='center'}
+knitr::include_graphics("img/thanks.png")
+```
+
+.pull-right[Ilustration by Allison Horst]
+]
