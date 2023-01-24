@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Introduction to coding with R</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Joselyn Chávez" />
+    <meta name="date" content="2023-01-24" />
+    <script src="slides_files/header-attrs-2.20/header-attrs.js"></script>
+    <script src="slides_files/clipboard-2.0.6/clipboard.min.js"></script>
+    <link href="slides_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="slides_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
+    <link rel="stylesheet" href="epi.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Introduction to coding with R
+]
+.subtitle[
+## Part III
+]
+.author[
+### Joselyn Chávez
+]
+.date[
+### 01/24/2023
+]
+
+---
+
+
+
+# Let's recap
+
+- How do we create a vector?
+- How do we access vector elements?
+- How do we modify vector contents?
+- How do we create a matrix?
+- What operations can we make with a matrix?
+- How do we select/extract data from a matrix?
+
+---
+
+# Data structures in R
+
+- Vectors
+- Matrices
+- Data frames
+- Lists
+- Functions
+
+---
+class: chapter-slide
+
+# Lists
+
+---
+
+# Lists
+
+- A list is an ordered collection of objects, known as components.
+
+- Components can be of different size and class. 
+
+- Lists can contain vectors, matrices, strings, data frames, functions, etc.
+
+---
+# How do we create a list?
+
+
+```r
+fruits &lt;- list(name = "apple",
+               quantity = 5,
+               properties = c("small", "red", "rounded"))
+
+fruits
+```
+
+```
+## $name
+## [1] "apple"
+## 
+## $quantity
+## [1] 5
+## 
+## $properties
+## [1] "small"   "red"     "rounded"
+```
+
+How it looks like using the function View( )?
+
+---
+# How do we access list elements?
+
+## Using index
+
+&lt;img src="img/train_1.png" width="100%" /&gt;
+Image from [Chapter 4 Subsetting. Advanced R. Second ed.](https://adv-r.hadley.nz/subsetting.html) by Hadley Wickham
+
+---
+# How do we access list elements?
+
+## Using index
+
+.pull-left[
+
+```r
+fruits[1]
+```
+
+```
+## $name
+## [1] "apple"
+```
+
+```r
+fruits[[1]]
+```
+
+```
+## [1] "apple"
+```
+]
+
+.pull-right[
+
+```r
+class(fruits[1])
+```
+
+```
+## [1] "list"
+```
+
+```r
+class(fruits[[1]])
+```
+
+```
+## [1] "character"
+```
+]
+
+---
+# Your turn!
+
+- How would you extract the number of apples?
+
+- How would you extract the word "red" from the properties of the apple?
+
+---
+# How do we access list elements?
+
+&lt;br&gt;
+&lt;img src="img/train_2.png" width="100%" /&gt;
+Image from [Chapter 4 Subsetting. Advanced R. Second ed.](https://adv-r.hadley.nz/subsetting.html) by Hadley Wickham
+
+---
+- Extract the name and number of apples
+
+
+```r
+fruits[1:2]
+```
+
+```
+## $name
+## [1] "apple"
+## 
+## $quantity
+## [1] 5
+```
+
+- Extract all elements except the number of apples
+
+
+```r
+fruits[-2]
+```
+
+```
+## $name
+## [1] "apple"
+## 
+## $properties
+## [1] "small"   "red"     "rounded"
+```
+
+---
+## Access elements using $
+
+
+```r
+fruits
+```
+
+```
+## $name
+## [1] "apple"
+## 
+## $quantity
+## [1] 5
+## 
+## $properties
+## [1] "small"   "red"     "rounded"
+```
+
+```r
+fruits$name
+```
+
+```
+## [1] "apple"
+```
+
+Only one element can be extracted with $
+
+---
+# Your turn!
+
+- Use $ to extract the number of apples
+
+- How would you extract the word "rounded" from the apple properties using $?
+
+---
+# How do we add a new element to the list?
+
+
+```r
+fruits["edible_shell"] &lt;- c(TRUE)
+fruits
+```
+
+```
+## $name
+## [1] "apple"
+## 
+## $quantity
+## [1] 5
+## 
+## $properties
+## [1] "small"   "red"     "rounded"
+## 
+## $edible_shell
+## [1] TRUE
+```
+
+---
+# How do we add a new element to the list?
+
+
+```r
+fruits$hard_shell &lt;- c(FALSE)
+fruits
+```
+
+```
+## $name
+## [1] "apple"
+## 
+## $quantity
+## [1] 5
+## 
+## $properties
+## [1] "small"   "red"     "rounded"
+## 
+## $edible_shell
+## [1] TRUE
+## 
+## $hard_shell
+## [1] FALSE
+```
+
+---
+# Your turn!
+
+Create a list with a patient information
+
+
+```r
+patient_1 &lt;- list(name = "John",
+                  last_name = "Doe",
+                  weight = 170,
+                  glucose = c(85, 90, 87, 89, 91))
+```
+
+- Extract the name and last name
+- Extract the glucose levels from days 3 to 5
+- Remove the weight
+- Add a new element to the list containing blood pressure levels
+
+---
+class: chapter-slide
+
+# Data Frames
+
+---
+
+# What is a data frame?
+
+- Two-dimensional arranged data (tables)
+- rows and columns
+- All columns must be the same length
+- Columns can have different type of data
+- All components in the column must be the same type (vector)
+
+---
+# Creating a data frame
+
+
+```r
+fruits &lt;- data.frame(
+  name = c("apples","berries","mangos","bananas"),  
+  number = c(1, 10, 7, 2),
+  edible_shell = c(TRUE,TRUE,FALSE,FALSE) )
+fruits
+```
+
+```
+##      name number edible_shell
+## 1  apples      1         TRUE
+## 2 berries     10         TRUE
+## 3  mangos      7        FALSE
+## 4 bananas      2        FALSE
+```
+
+---
+
+# Properties of data frames
+
+- nrow
+
+
+```r
+nrow(fruits)
+```
+
+```
+## [1] 4
+```
+
+- ncol
+
+
+```r
+ncol(fruits)
+```
+
+```
+## [1] 3
+```
+
+---
+
+- dim
+
+
+```r
+dim(fruits)
+```
+
+```
+## [1] 4 3
+```
+
+--
+
+- rownames
+
+
+```r
+rownames(fruits)
+```
+
+```
+## [1] "1" "2" "3" "4"
+```
+
+- colnames
+
+
+```r
+colnames(fruits)
+```
+
+```
+## [1] "name"         "number"       "edible_shell"
+```
+
+---
+## Let's practice
+
+Create a data frame (patients) that contains the following information:
+
+
+```
+##   first_name last_name age co_morbidity
+## 1        Ava     Smith  65         TRUE
+## 2       Noah   Johnson  20        FALSE
+## 3     Olivia  Williams  47        FALSE
+```
+
+- How many rows and columns does the data frame have?
+- Print the columns and rows names
+
+---
+class: chapter-slide
+
+# How do we access data frame elements?
+
+---
+
+# Using row and column index
+
+Syntaxis: df[row, column]
+
+
+```r
+fruits
+```
+
+```
+##      name number edible_shell
+## 1  apples      1         TRUE
+## 2 berries     10         TRUE
+## 3  mangos      7        FALSE
+## 4 bananas      2        FALSE
+```
+
+```r
+fruits[2,3]
+```
+
+```
+## [1] TRUE
+```
+
+---
+
+Select rows 1 to 2 from column 3
+
+
+```r
+fruits[1:2,3]
+```
+
+```
+## [1] TRUE TRUE
+```
+
+---
+## Your turn!
+
+Using the patients data frame 
+
+
+```
+##   first_name last_name age co_morbidity
+## 1        Ava     Smith  65         TRUE
+## 2       Noah   Johnson  20        FALSE
+## 3     Olivia  Williams  47        FALSE
+```
+
+- Extract the last name and age from Ava and Noah 
+
+---
+
+- Select all rows from column 2
+
+
+```r
+fruits[,2]
+```
+
+```
+## [1]  1 10  7  2
+```
+
+- Select all columns from row 2
+
+
+```r
+fruits[2,]
+```
+
+```
+##      name number edible_shell
+## 2 berries     10         TRUE
+```
+
+---
+## Your turn!
+
+Using the patients data frame 
+
+
+```
+##   first_name last_name age co_morbidity
+## 1        Ava     Smith  65         TRUE
+## 2       Noah   Johnson  20        FALSE
+## 3     Olivia  Williams  47        FALSE
+```
+
+- Extract all the information (columns) from Olivia.
+- Extract the age from all patients
+
+---
+
+# Using the $ symbol
+
+Syntaxis: df$column_name
+
+- Extract the fruits name
+
+
+```r
+fruits$name
+```
+
+```
+## [1] "apples"  "berries" "mangos"  "bananas"
+```
+
+--
+
+- What type of structure has the result?
+
+
+```r
+class(fruits$name)
+```
+
+```
+## [1] "character"
+```
+
+---
+
+## Your turn!
+
+Using the patients data frame 
+
+
+```
+##   first_name last_name age co_morbidity
+## 1        Ava     Smith  65         TRUE
+## 2       Noah   Johnson  20        FALSE
+## 3     Olivia  Williams  47        FALSE
+```
+
+- Extract the last_name column using the $ symbol
+- Extract the age column. What's the class of the result?
+- How do you extract the age of Noah using the previous result?
+
+---
+# How do we add a new column?
+
+
+```r
+cbind(fruits, 
+      "hard_shell" = c(FALSE, FALSE, FALSE, FALSE))
+```
+
+```
+##      name number edible_shell hard_shell
+## 1  apples      1         TRUE      FALSE
+## 2 berries     10         TRUE      FALSE
+## 3  mangos      7        FALSE      FALSE
+## 4 bananas      2        FALSE      FALSE
+```
+
+```r
+fruits
+```
+
+```
+##      name number edible_shell
+## 1  apples      1         TRUE
+## 2 berries     10         TRUE
+## 3  mangos      7        FALSE
+## 4 bananas      2        FALSE
+```
+
+---
+# How do we add a new column?
+
+
+```r
+fruits$hard_shell &lt;- c(FALSE, FALSE, FALSE, FALSE)
+
+fruits
+```
+
+```
+##      name number edible_shell hard_shell
+## 1  apples      1         TRUE      FALSE
+## 2 berries     10         TRUE      FALSE
+## 3  mangos      7        FALSE      FALSE
+## 4 bananas      2        FALSE      FALSE
+```
+
+---
+# How do we add a new row?
+
+
+```r
+rbind(fruits, c("coconut", 3, FALSE, TRUE))
+```
+
+```
+##      name number edible_shell hard_shell
+## 1  apples      1         TRUE      FALSE
+## 2 berries     10         TRUE      FALSE
+## 3  mangos      7        FALSE      FALSE
+## 4 bananas      2        FALSE      FALSE
+## 5 coconut      3        FALSE       TRUE
+```
+
+```r
+fruits
+```
+
+```
+##      name number edible_shell hard_shell
+## 1  apples      1         TRUE      FALSE
+## 2 berries     10         TRUE      FALSE
+## 3  mangos      7        FALSE      FALSE
+## 4 bananas      2        FALSE      FALSE
+```
+
+---
+# Your turn!
+
+
+```r
+patients
+```
+
+```
+##   first_name last_name age co_morbidity
+## 1        Ava     Smith  65         TRUE
+## 2       Noah   Johnson  20        FALSE
+## 3     Olivia  Williams  47        FALSE
+```
+
+- Add a new column ("glucose") with glucose levels
+
+- Add a new patient (row)
+
+---
+
+.pull-left[&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+.center[
+# Thanks!
+]
+]
+
+.pull-right[&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;img src="img/thanks.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+.pull-right[Ilustration by Allison Horst]
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"self-contained": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
