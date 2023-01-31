@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Data transformation</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Joselyn Chávez" />
+    <meta name="date" content="2023-01-31" />
+    <script src="slides_files/header-attrs-2.20/header-attrs.js"></script>
+    <script src="slides_files/clipboard-2.0.6/clipboard.min.js"></script>
+    <link href="slides_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="slides_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
+    <link rel="stylesheet" href="epi.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Data transformation
+]
+.author[
+### Joselyn Chávez
+]
+.date[
+### 01/31/2023
+]
+
+---
+
+
+
+# Let's recap
+
+- What are some properties of data frames?
+- What are some properties of lists?
+- How do we access data on data frames?
+- How do we access data on lists?
+
+---
+# What is Tidyverse?
+
+.pull-left[
+&lt;img src="img/tidyverse.png" width="100%" style="display: block; margin: auto;" /&gt;
+.center[&lt;https://www.tidyverse.org&gt;]
+]
+
+.pull-left[&lt;br&gt;
+- A collection of R packages designed for data science. 
+
+- The packages share a philosophy of design, grammar and data structure.
+]
+
+---
+# Which packages are part of the Tidyverse?
+
+## Tidyverse base
+
+- **ggplot2**: creation of graphics
+- **dplyr**: data handling
+- **tidyr**: tidy data array
+- **readr**: reading and writing of tabular data
+- purrr: functional programming
+- **tibble**: re-design of data frames
+- **stringr**: text handling (strings)
+- forcats: factor management
+
+---
+## Reading data
+
+- **DBI**: relational databases
+- haven: SPSS, Stata, and SAS data
+- httr: web APIs.
+- **readxl**: reading . xls and . xlsx
+- **googlesheets4**: reading Google Sheets
+- googledrive: reading Google Drive files
+- rvest: web scraping.
+- jsonlite: JSON
+- xml2: XML reading
+
+---
+
+.pull-left[
+## Handling data
+- **lubridate**: handling dates
+- hms: time zones.
+- blob: binary data storage
+
+## Modeling
+- **tidymodels**: modeling and machine learning
+]
+
+.pull-right[
+## Programming
+- **magrittr**: provides pipe %&gt;% and other specialized operators (%$%, %&lt;&gt;%)
+- glue: alternative to paste() to combine data and text
+]
+
+---
+# Tidyverse packages for data analysis
+
+&lt;img src="img/whytidyverse.png" width="100%" style="display: block; margin: auto;" /&gt;
+.center[Image from [Why the tidyverse](https://rviews.rstudio.com/2017/06/08/what-is-the-tidyverse/) by Joseph Rickert]
+
+---
+# tibbles
+
+&lt;img src="img/tidydata.jpg" width="100%" /&gt;
+.center[Artwork by @allison_horst]
+
+---
+# tibbles
+
+
+```r
+library(dplyr)
+df &lt;- data.frame(x = letters, 
+                 y = 1:26, 
+                 z = sample(c(TRUE, FALSE), 26, 
+                            replace = TRUE))
+dt &lt;- tibble(x = letters, 
+                 y = 1:26, 
+                 z = sample(c(TRUE, FALSE), 26, 
+                            replace = TRUE))
+```
+
+---
+## Differences between data frames and tibbles
+
+.pull-left[
+
+```r
+head(df)
+```
+
+```
+##   x y     z
+## 1 a 1  TRUE
+## 2 b 2  TRUE
+## 3 c 3  TRUE
+## 4 d 4  TRUE
+## 5 e 5  TRUE
+## 6 f 6 FALSE
+```
+]
+
+.pull-right[
+
+```r
+head(dt)
+```
+
+```
+## # A tibble: 6 × 3
+##   x         y z    
+##   &lt;chr&gt; &lt;int&gt; &lt;lgl&gt;
+## 1 a         1 FALSE
+## 2 b         2 TRUE 
+## 3 c         3 TRUE 
+## 4 d         4 TRUE 
+## 5 e         5 TRUE 
+## 6 f         6 TRUE
+```
+]
+
+---
+# Reading and writing of tibbles
+
+
+```r
+library(readr)
+sinai_covid &lt;- read_csv("Sinai_covid.csv")
+```
+
+
+```r
+head(sinai_covid)
+
+write_csv(sinai_covid, "printed_sinai_covid.csv")
+```
+
+---
+# Arrange
+
+
+```r
+library(dplyr)
+
+arrange(sinai_covid, by = age)
+```
+
+```
+## # A tibble: 500 × 18
+##       id   age sex    race    ethni…¹ facil…² smoki…³ asthma  copd   htn obesity
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;
+##  1  3313     0 MALE   OTHER   MEXICA… THE MO… NEVER        0     0     0       0
+##  2  1081     9 FEMALE OTHER   LATIN … THE MO… NEVER        0     0     0       0
+##  3   940    11 FEMALE ASIAN … NON-HI… THE MO… NEVER        0     0     0       0
+##  4  4159    15 MALE   OTHER   NON-HI… THE MO… NEVER        0     0     1       0
+##  5  4995    18 FEMALE OTHER   PUERTO… THE MO… NEVER        0     0     0       0
+##  6   196    20 MALE   WHITE   NON-HI… THE MO… NEVER        0     0     0       0
+##  7    21    21 FEMALE WHITE   NON-HI… THE MO… NEVER        0     0     0       0
+##  8  2774    21 MALE   OTHER   NON-HI… THE MO… NEVER        0     0     1       1
+##  9  4722    21 FEMALE AFRICA… NON-HI… MOUNT … NEVER        0     0     0       0
+## 10  3782    22 MALE   OTHER   PERUVI… THE MO… NEVER        0     0     0       0
+## # … with 490 more rows, 7 more variables: diabetes &lt;dbl&gt;,
+## #   chronic_kidney_disease &lt;dbl&gt;, hiv_flag &lt;dbl&gt;, cancer_flag &lt;dbl&gt;, bmi &lt;dbl&gt;,
+## #   deceased_indicator &lt;dbl&gt;, deceased_days_since_encounter &lt;dbl&gt;, and
+## #   abbreviated variable names ¹​ethnicity, ²​facility, ³​smoking_status
+```
+
+---
+# Filter
+
+&lt;img src="img/filter.png" width="100%" /&gt;
+
+---
+# Filter
+
+
+```r
+filter(sinai_covid, age &gt; 50)
+```
+
+```
+## # A tibble: 374 × 18
+##       id   age sex    race    ethni…¹ facil…² smoki…³ asthma  copd   htn obesity
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;
+##  1     6    63 MALE   WHITE   NON-HI… THE MO… QUIT         0     0     1       0
+##  2    11    64 MALE   AFRICA… NON-HI… THE MO… NEVER        0     1     1       1
+##  3    46    51 FEMALE OTHER   NON-HI… MOUNT … NEVER        0     0     0       0
+##  4    47    72 MALE   WHITE   NON-HI… THE MO… NEVER        0     0     0       0
+##  5    63    67 FEMALE AFRICA… NON-HI… MOUNT … QUIT         0     0     1       0
+##  6    67    83 FEMALE WHITE   DOMINI… MOUNT … NEVER        0     0     0       0
+##  7    86    73 FEMALE AFRICA… UNKNOWN MOUNT … QUIT         0     0     0       0
+##  8    90    59 FEMALE AFRICA… NON-HI… MOUNT … QUIT         1     1     1       0
+##  9    92    65 FEMALE WHITE   NON-HI… THE MO… NEVER        0     0     0       0
+## 10   103    60 MALE   WHITE   NON-HI… MOUNT … NEVER        0     0     0       0
+## # … with 364 more rows, 7 more variables: diabetes &lt;dbl&gt;,
+## #   chronic_kidney_disease &lt;dbl&gt;, hiv_flag &lt;dbl&gt;, cancer_flag &lt;dbl&gt;, bmi &lt;dbl&gt;,
+## #   deceased_indicator &lt;dbl&gt;, deceased_days_since_encounter &lt;dbl&gt;, and
+## #   abbreviated variable names ¹​ethnicity, ²​facility, ³​smoking_status
+```
+
+---
+# Filter
+
+
+```r
+filter(sinai_covid, age &gt; 50 &amp; sex == "FEMALE")
+```
+
+```
+## # A tibble: 168 × 18
+##       id   age sex    race    ethni…¹ facil…² smoki…³ asthma  copd   htn obesity
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;
+##  1    46    51 FEMALE OTHER   NON-HI… MOUNT … NEVER        0     0     0       0
+##  2    63    67 FEMALE AFRICA… NON-HI… MOUNT … QUIT         0     0     1       0
+##  3    67    83 FEMALE WHITE   DOMINI… MOUNT … NEVER        0     0     0       0
+##  4    86    73 FEMALE AFRICA… UNKNOWN MOUNT … QUIT         0     0     0       0
+##  5    90    59 FEMALE AFRICA… NON-HI… MOUNT … QUIT         1     1     1       0
+##  6    92    65 FEMALE WHITE   NON-HI… THE MO… NEVER        0     0     0       0
+##  7   138    83 FEMALE OTHER   DOMINI… MOUNT … NEVER        0     0     0       0
+##  8   186    68 FEMALE CHINESE UNKNOWN THE MO… NEVER        0     0     0       0
+##  9   259    72 FEMALE AFRICA… NON-HI… MOUNT … NEVER        0     0     0       0
+## 10   260    63 FEMALE AFRICA… NON-HI… MOUNT … QUIT         0     0     0       0
+## # … with 158 more rows, 7 more variables: diabetes &lt;dbl&gt;,
+## #   chronic_kidney_disease &lt;dbl&gt;, hiv_flag &lt;dbl&gt;, cancer_flag &lt;dbl&gt;, bmi &lt;dbl&gt;,
+## #   deceased_indicator &lt;dbl&gt;, deceased_days_since_encounter &lt;dbl&gt;, and
+## #   abbreviated variable names ¹​ethnicity, ²​facility, ³​smoking_status
+```
+
+---
+# Filter
+
+
+```r
+filter(sinai_covid, age &gt; 50, sex == "FEMALE")
+```
+
+```
+## # A tibble: 168 × 18
+##       id   age sex    race    ethni…¹ facil…² smoki…³ asthma  copd   htn obesity
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;
+##  1    46    51 FEMALE OTHER   NON-HI… MOUNT … NEVER        0     0     0       0
+##  2    63    67 FEMALE AFRICA… NON-HI… MOUNT … QUIT         0     0     1       0
+##  3    67    83 FEMALE WHITE   DOMINI… MOUNT … NEVER        0     0     0       0
+##  4    86    73 FEMALE AFRICA… UNKNOWN MOUNT … QUIT         0     0     0       0
+##  5    90    59 FEMALE AFRICA… NON-HI… MOUNT … QUIT         1     1     1       0
+##  6    92    65 FEMALE WHITE   NON-HI… THE MO… NEVER        0     0     0       0
+##  7   138    83 FEMALE OTHER   DOMINI… MOUNT … NEVER        0     0     0       0
+##  8   186    68 FEMALE CHINESE UNKNOWN THE MO… NEVER        0     0     0       0
+##  9   259    72 FEMALE AFRICA… NON-HI… MOUNT … NEVER        0     0     0       0
+## 10   260    63 FEMALE AFRICA… NON-HI… MOUNT … QUIT         0     0     0       0
+## # … with 158 more rows, 7 more variables: diabetes &lt;dbl&gt;,
+## #   chronic_kidney_disease &lt;dbl&gt;, hiv_flag &lt;dbl&gt;, cancer_flag &lt;dbl&gt;, bmi &lt;dbl&gt;,
+## #   deceased_indicator &lt;dbl&gt;, deceased_days_since_encounter &lt;dbl&gt;, and
+## #   abbreviated variable names ¹​ethnicity, ²​facility, ³​smoking_status
+```
+
+---
+# Filter
+
+
+```r
+filter(sinai_covid, age &gt; 50 || sex == "FEMALE")
+```
+
+```
+## Warning in age &gt; 50 || sex == "FEMALE": 'length(x) = 500 &gt; 1' in coercion to
+## 'logical(1)'
+```
+
+```
+## # A tibble: 500 × 18
+##       id   age sex    race    ethni…¹ facil…² smoki…³ asthma  copd   htn obesity
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;
+##  1     6    63 MALE   WHITE   NON-HI… THE MO… QUIT         0     0     1       0
+##  2    11    64 MALE   AFRICA… NON-HI… THE MO… NEVER        0     1     1       1
+##  3    21    21 FEMALE WHITE   NON-HI… THE MO… NEVER        0     0     0       0
+##  4    46    51 FEMALE OTHER   NON-HI… MOUNT … NEVER        0     0     0       0
+##  5    47    72 MALE   WHITE   NON-HI… THE MO… NEVER        0     0     0       0
+##  6    63    67 FEMALE AFRICA… NON-HI… MOUNT … QUIT         0     0     1       0
+##  7    67    83 FEMALE WHITE   DOMINI… MOUNT … NEVER        0     0     0       0
+##  8    86    73 FEMALE AFRICA… UNKNOWN MOUNT … QUIT         0     0     0       0
+##  9    90    59 FEMALE AFRICA… NON-HI… MOUNT … QUIT         1     1     1       0
+## 10    92    65 FEMALE WHITE   NON-HI… THE MO… NEVER        0     0     0       0
+## # … with 490 more rows, 7 more variables: diabetes &lt;dbl&gt;,
+## #   chronic_kidney_disease &lt;dbl&gt;, hiv_flag &lt;dbl&gt;, cancer_flag &lt;dbl&gt;, bmi &lt;dbl&gt;,
+## #   deceased_indicator &lt;dbl&gt;, deceased_days_since_encounter &lt;dbl&gt;, and
+## #   abbreviated variable names ¹​ethnicity, ²​facility, ³​smoking_status
+```
+
+---
+# Select
+
+
+```r
+select(sinai_covid, id, age, facility)
+```
+
+```
+## # A tibble: 500 × 3
+##       id   age facility                   
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;                      
+##  1     6    63 THE MOUNT SINAI HOSPITAL   
+##  2    11    64 THE MOUNT SINAI HOSPITAL   
+##  3    21    21 THE MOUNT SINAI HOSPITAL   
+##  4    46    51 MOUNT SINAI QUEENS HOSPITAL
+##  5    47    72 THE MOUNT SINAI HOSPITAL   
+##  6    63    67 MOUNT SINAI QUEENS HOSPITAL
+##  7    67    83 MOUNT SINAI WEST           
+##  8    86    73 MOUNT SINAI BI BROOKLYN    
+##  9    90    59 MOUNT SINAI QUEENS HOSPITAL
+## 10    92    65 THE MOUNT SINAI HOSPITAL   
+## # … with 490 more rows
+```
+
+---
+## Combine functions
+
+
+```r
+x &lt;- filter(sinai_covid, age &gt; 50)
+
+x &lt;- select(x, id, age, facility)
+
+arrange(x, age)
+```
+
+```
+## # A tibble: 374 × 3
+##       id   age facility                   
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;                      
+##  1    46    51 MOUNT SINAI QUEENS HOSPITAL
+##  2  2323    51 THE MOUNT SINAI HOSPITAL   
+##  3  3894    51 THE MOUNT SINAI HOSPITAL   
+##  4  4230    51 MOUNT SINAI BI BROOKLYN    
+##  5   439    52 THE MOUNT SINAI HOSPITAL   
+##  6   450    52 MOUNT SINAI BI BROOKLYN    
+##  7  3812    52 THE MOUNT SINAI HOSPITAL   
+##  8  3900    52 MOUNT SINAI WEST           
+##  9  4104    52 MOUNT SINAI BI BROOKLYN    
+## 10  4864    52 MOUNT SINAI QUEENS HOSPITAL
+## # … with 364 more rows
+```
+
+---
+# Your turn!
+
+Use sinai_covid tibble
+
+- Extract all patients from THE MOUNT SINAI HOSPITAL and MOUNT SINAI BI BROOKLYN
+- Select id, sex, ethnicity and bmi
+- Order the result by bmi
+
+---
+# Mutate
+
+&lt;img src="img/mutate.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+# Mutate
+
+
+```r
+x &lt;- mutate(sinai_covid, bmi_log = log10(bmi))
+
+select(x, id, bmi, bmi_log)
+```
+
+```
+## # A tibble: 500 × 3
+##       id   bmi bmi_log
+##    &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;
+##  1     6  28.7    1.46
+##  2    11  36.0    1.56
+##  3    21  25.0    1.40
+##  4    46  24.6    1.39
+##  5    47  25.8    1.41
+##  6    63  22.0    1.34
+##  7    67  27.6    1.44
+##  8    86  24.6    1.39
+##  9    90  30.2    1.48
+## 10    92  19.4    1.29
+## # … with 490 more rows
+```
+
+---
+# Mutate
+
+
+```r
+x &lt;- mutate(sinai_covid, 
+            new_facility = paste("Facility:",facility))
+
+select(x, id, new_facility)
+```
+
+```
+## # A tibble: 500 × 2
+##       id new_facility                         
+##    &lt;dbl&gt; &lt;chr&gt;                                
+##  1     6 Facility: THE MOUNT SINAI HOSPITAL   
+##  2    11 Facility: THE MOUNT SINAI HOSPITAL   
+##  3    21 Facility: THE MOUNT SINAI HOSPITAL   
+##  4    46 Facility: MOUNT SINAI QUEENS HOSPITAL
+##  5    47 Facility: THE MOUNT SINAI HOSPITAL   
+##  6    63 Facility: MOUNT SINAI QUEENS HOSPITAL
+##  7    67 Facility: MOUNT SINAI WEST           
+##  8    86 Facility: MOUNT SINAI BI BROOKLYN    
+##  9    90 Facility: MOUNT SINAI QUEENS HOSPITAL
+## 10    92 Facility: THE MOUNT SINAI HOSPITAL   
+## # … with 490 more rows
+```
+
+---
+# Mutate
+
+
+```r
+x &lt;- mutate(sinai_covid, 
+            facility = tolower(facility))
+
+select(x, id, facility)
+```
+
+```
+## # A tibble: 500 × 2
+##       id facility                   
+##    &lt;dbl&gt; &lt;chr&gt;                      
+##  1     6 the mount sinai hospital   
+##  2    11 the mount sinai hospital   
+##  3    21 the mount sinai hospital   
+##  4    46 mount sinai queens hospital
+##  5    47 the mount sinai hospital   
+##  6    63 mount sinai queens hospital
+##  7    67 mount sinai west           
+##  8    86 mount sinai bi brooklyn    
+##  9    90 mount sinai queens hospital
+## 10    92 the mount sinai hospital   
+## # … with 490 more rows
+```
+
+---
+# Your turn!
+
+Use mutate to:
+
+- Add a new column "random_num" adding random numbers (tip: use rnorm) 
+- Change sex column from uppercase to lowercase
+- Add a new column with the result of multiplying bmi by 10
+
+---
+# Count
+
+
+```r
+count(sinai_covid, facility)
+```
+
+```
+## # A tibble: 5 × 2
+##   facility                        n
+##   &lt;chr&gt;                       &lt;int&gt;
+## 1 MOUNT SINAI BI BROOKLYN        84
+## 2 MOUNT SINAI QUEENS HOSPITAL    89
+## 3 MOUNT SINAI ST. LUKE'S         86
+## 4 MOUNT SINAI WEST               53
+## 5 THE MOUNT SINAI HOSPITAL      188
+```
+
+---
+# Summarise
+
+
+```r
+summarise(sinai_covid, mean_age = mean(age))
+```
+
+```
+## # A tibble: 1 × 1
+##   mean_age
+##      &lt;dbl&gt;
+## 1     61.1
+```
+
+---
+# Group
+
+
+```r
+x &lt;- group_by(sinai_covid, facility)
+
+summarise(x, mean_age = mean(age))
+```
+
+```
+## # A tibble: 5 × 2
+##   facility                    mean_age
+##   &lt;chr&gt;                          &lt;dbl&gt;
+## 1 MOUNT SINAI BI BROOKLYN         64.2
+## 2 MOUNT SINAI QUEENS HOSPITAL     64.5
+## 3 MOUNT SINAI ST. LUKE'S          65.5
+## 4 MOUNT SINAI WEST                67.6
+## 5 THE MOUNT SINAI HOSPITAL        54.3
+```
+
+---
+# Combining functions using the pipe
+
+
+```r
+group_by(sinai_covid, facility) %&gt;% 
+  summarise(mean_age = mean(age))
+```
+
+```
+## # A tibble: 5 × 2
+##   facility                    mean_age
+##   &lt;chr&gt;                          &lt;dbl&gt;
+## 1 MOUNT SINAI BI BROOKLYN         64.2
+## 2 MOUNT SINAI QUEENS HOSPITAL     64.5
+## 3 MOUNT SINAI ST. LUKE'S          65.5
+## 4 MOUNT SINAI WEST                67.6
+## 5 THE MOUNT SINAI HOSPITAL        54.3
+```
+
+---
+# Combining functions using the pipe
+
+
+```r
+sinai_covid %&gt;% 
+  group_by(facility) %&gt;% 
+  summarise(mean_age = mean(age))
+```
+
+```
+## # A tibble: 5 × 2
+##   facility                    mean_age
+##   &lt;chr&gt;                          &lt;dbl&gt;
+## 1 MOUNT SINAI BI BROOKLYN         64.2
+## 2 MOUNT SINAI QUEENS HOSPITAL     64.5
+## 3 MOUNT SINAI ST. LUKE'S          65.5
+## 4 MOUNT SINAI WEST                67.6
+## 5 THE MOUNT SINAI HOSPITAL        54.3
+```
+
+---
+# Combining functions using the pipe
+
+
+```r
+sinai_covid %&gt;% 
+  filter(age &gt; 50) %&gt;% 
+  count(facility, name = "patients_older_than_50")
+```
+
+```
+## # A tibble: 5 × 2
+##   facility                    patients_older_than_50
+##   &lt;chr&gt;                                        &lt;int&gt;
+## 1 MOUNT SINAI BI BROOKLYN                         70
+## 2 MOUNT SINAI QUEENS HOSPITAL                     71
+## 3 MOUNT SINAI ST. LUKE'S                          72
+## 4 MOUNT SINAI WEST                                46
+## 5 THE MOUNT SINAI HOSPITAL                       115
+```
+
+---
+# Your turn!
+
+## Exercise 1
+
+Use the pipe to:
+
+- Extract all patients from THE MOUNT SINAI HOSPITAL and MOUNT SINAI BI BROOKLYN
+- Select id, sex, ethnicity and bmi
+- Order by bmi
+
+---
+# Your turn!
+
+## Exercise 2
+
+Use the pipe to:
+
+- Extract all patients from THE MOUNT SINAI HOSPITAL and MOUNT SINAI BI BROOKLYN
+- Select id, sex, ethnicity and bmi
+- Count ethnicity by facility
+
+---
+# Your turn!
+
+## Exercise 3
+
+Use the pipe to:
+
+- Extract all patients from THE MOUNT SINAI HOSPITAL and MOUNT SINAI BI BROOKLYN
+- Select id, age, ethnicity and bmi
+- Calculate mean of age by facility
+
+---
+
+.pull-left[&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+.center[
+# Thanks!
+]
+]
+
+.pull-right[&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;img src="img/thanks.png" width="100%" style="display: block; margin: auto;" /&gt;
+.center[Artwork by @allison_horst]
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"self-contained": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
