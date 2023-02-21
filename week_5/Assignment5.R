@@ -1,45 +1,28 @@
 ### Introduction to Epidemiology Data Analysis with R. 
 
-### Introduction to coding with R. Part III.
+### Data transformation
 
-# Assignment week 4: 
-
-
-## Let's create a list with immunization records from a patient
-
-patient_1 <- list(name = "Jane",
-                  last_name = "Doe",
-                  year = c(2010,2011,2012,2013,2014),
-                  vaccine = c("Hepatitis B", "Rotavirus","Tetanus","Influenza","Varicella"))
-
-### 1) Use brackets to extract the year and vaccines applied
+# Assignment week 5: 
 
 
-### 2) Use $ to extract the vaccines component
+## Read the cause_of_death.xlsx file and store the table within the cause_of_death variable
+cause_of_death <- readxl::read_excel("cause_of_death.xlsx")
+
+### 1) Order the table by year
 
 
-### 3) How would you extract the "Influenza" vaccine? 
+### 2) Create a new column deaths_k with the result of dividing deaths/1000
 
 
-## Let's create a data frame
-
-vaccines <- data.frame(year = c(2010,2011,2012,2013,2014),
-                       vaccine = c("Hepatitis B", "Rotavirus","Tetanus","Influenza","Varicella"),
-                       doses_applied = c(205, 216, 192, 187, 209))
-
-### 4) Extract the column of vaccines and dosis applied
+### 3) From the previous result, select all columns except deaths 
 
 
-### 5) Add a new row with the Measles vaccine that was applied on year 2015 using 200 doses
+### 4) Select men who died of Cerebrovascular diseases in 2019. 
+### Which race had the lower number of deaths?
 
 
-
-
-
-my_matrix <- matrix(1:30, ncol = 6)
-
-### 6) How would you select columns 2 to 4 with all their rows?
-
+### 5) What was the main cause of death among women Black or African-American 
+### population during 1980?
 
 
 

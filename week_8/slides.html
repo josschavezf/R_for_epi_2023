@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Data visualization</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Joselyn Chávez" />
+    <meta name="date" content="2023-02-21" />
+    <script src="slides_files/header-attrs-2.20/header-attrs.js"></script>
+    <script src="slides_files/clipboard-2.0.6/clipboard.min.js"></script>
+    <link href="slides_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="slides_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
+    <link rel="stylesheet" href="epi.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Data visualization
+]
+.subtitle[
+## Part II
+]
+.author[
+### Joselyn Chávez
+]
+.date[
+### 02/21/2023
+]
+
+---
+
+
+
+# Let's recap
+
+&lt;img src="img/gglayers.png" width="90%" /&gt;
+
+---
+# Let's recap
+
+- What geometry would you use for plotting two numerical variables?
+- What geometry would you use for plotting categorical vs continuous variables?
+- How can you include a third variable in the plot?
+
+---
+
+# Plotting num vs num vs cat
+
+
+```r
+library(tidyverse)
+sinai_covid &lt;- read_csv("Sinai_covid.csv")
+
+ggplot(sinai_covid, 
+       aes(x = age, 
+           y = bmi,
+           color = facility)) +
+  geom_point()
+```
+
+&lt;img src="slides_files/figure-html/unnamed-chunk-2-1.png" width="400" height="250" style="display: block; margin: auto;" /&gt;
+
+---
+# Plotting num vs num vs cat vs cat
+
+
+```r
+ggplot(sinai_covid,aes(x = age, 
+                       y = bmi,
+                       color = facility,
+                       shape = sex)) +
+  geom_point()
+```
+
+&lt;img src="slides_files/figure-html/unnamed-chunk-3-1.png" width="400" height="250" style="display: block; margin: auto;" /&gt;
+
+---
+# Plotting cat vs cat?
+
+- How would you compare smoking_status vs facility?
+
+
+```r
+ggplot(sinai_covid, 
+       aes(x = smoking_status,
+           y = facility)) +
+  geom_point()
+```
+
+&lt;img src="slides_files/figure-html/unnamed-chunk-4-1.png" width="350" height="200" style="display: block; margin: auto;" /&gt;
+
+---
+# Plotting cat vs cat vs num
+
+- First create the summarized tibble
+
+
+```r
+count_smoking &lt;- sinai_covid %&gt;% 
+  group_by(facility) %&gt;% 
+  count(smoking_status)
+
+count_smoking[1:3,]
+```
+
+```
+## # A tibble: 3 × 3
+## # Groups:   facility [1]
+##   facility                smoking_status     n
+##   &lt;chr&gt;                   &lt;chr&gt;          &lt;int&gt;
+## 1 MOUNT SINAI BI BROOKLYN NEVER             78
+## 2 MOUNT SINAI BI BROOKLYN QUIT               5
+## 3 MOUNT SINAI BI BROOKLYN YES                1
+```
+
+---
+
+- Plot
+
+```r
+ggplot(count_smoking, 
+       aes(x = smoking_status,
+           y = facility,
+           size = n)) +
+  geom_point()
+```
+
+&lt;img src="slides_files/figure-html/unnamed-chunk-6-1.png" width="400" height="250" style="display: block; margin: auto;" /&gt;
+
+---
+# Plotting 3 variables (cat-cat-num)
+
+
+```r
+ggplot(count_smoking, 
+       aes(x = smoking_status, 
+           y = facility,
+           size = n, color = n)) +
+  geom_point()
+```
+
+&lt;img src="slides_files/figure-html/unnamed-chunk-7-1.png" width="400" height="250" style="display: block; margin: auto;" /&gt;
+
+---
+# Let's practice
+
+- Count the number of patients with obesity (0 and 1) per facility 
+- Plot the data mapping the size of the dots to the obesity counts
+
+---
+# Another way
+
+
+```r
+ob_count &lt;- sinai_covid %&gt;% 
+  group_by(facility) %&gt;% 
+  count(obesity)
+
+ggplot(ob_count, aes(x = facility, y = n, 
+                     fill = obesity)) +
+  geom_col()
+```
+
+&lt;img src="slides_files/figure-html/unnamed-chunk-8-1.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+---
+
+- Obesity must be a "categorical" variable
+- Let's treat the variable as factor
+
+
+```r
+ggplot(ob_count, 
+       aes(x = n, 
+           y = facility, 
+           fill = factor(obesity))) +
+  geom_col()
+```
+
+&lt;img src="slides_files/figure-html/unnamed-chunk-9-1.png" width="400" height="250" style="display: block; margin: auto;" /&gt;
+
+---
+
+Or replace values
+
+
+```r
+ob_count &lt;- ob_count %&gt;% 
+  mutate(obesity = case_when(obesity == 0 ~ "no",
+                             obesity == 1 ~ "yes"))
+
+ggplot(ob_count, aes(x = n, y = facility, 
+               fill = obesity)) +
+  geom_col()
+```
+
+&lt;img src="slides_files/figure-html/unnamed-chunk-10-1.png" width="500" height="300" style="display: block; margin: auto;" /&gt;
+
+---
+# Splitting the bars
+
+
+```r
+ggplot(ob_count, 
+       aes(x = n, 
+           y = facility, 
+           fill = obesity)) +
+  geom_col(position = position_dodge())
+```
+
+&lt;img src="slides_files/figure-html/unnamed-chunk-11-1.png" width="400" height="250" style="display: block; margin: auto;" /&gt;
+
+---
+# Adding titles
+
+
+```r
+ggplot(ob_count, 
+       aes(x = n, y = facility, 
+           fill = obesity)) +
+  geom_col(position = position_dodge()) +
+  labs(title = "Obesity incidence per fcility",
+       x = "Number of patients",
+       y = "",
+       fill = "Obesity")
+```
+
+&lt;img src="slides_files/figure-html/unnamed-chunk-12-1.png" width="400" height="250" style="display: block; margin: auto;" /&gt;
+
+
+---
+# Facets
+
+
+```r
+ob_count &lt;- sinai_covid %&gt;% 
+  group_by(facility, sex) %&gt;% 
+  count(obesity) %&gt;% 
+  mutate(obesity = case_when(obesity == 0 ~ "no",
+                             obesity == 1 ~ "yes"))
+
+ob_count[1:3,]
+```
+
+```
+## # A tibble: 3 × 4
+## # Groups:   facility, sex [2]
+##   facility                sex    obesity     n
+##   &lt;chr&gt;                   &lt;chr&gt;  &lt;chr&gt;   &lt;int&gt;
+## 1 MOUNT SINAI BI BROOKLYN FEMALE no         42
+## 2 MOUNT SINAI BI BROOKLYN MALE   no         41
+## 3 MOUNT SINAI BI BROOKLYN MALE   yes         1
+```
+
+---
+## Facet grid
+
+
+```r
+ggplot(ob_count, 
+       aes(x = n, y = facility, 
+           fill = obesity)) +
+  geom_col(position = position_dodge()) +
+  labs(title = "Obesity incidence per facility",
+       x = "Number of patients",
+       y = "",
+       fill = "Obesity") +
+  facet_grid(rows = vars(sex))
+```
+
+&lt;img src="slides_files/figure-html/unnamed-chunk-14-1.png" width="400" height="250" style="display: block; margin: auto;" /&gt;
+
+---
+## Facet grid
+
+
+```r
+ggplot(ob_count, 
+       aes(x = n, y = facility, 
+           fill = obesity)) +
+  geom_col(position = position_dodge()) +
+  labs(title = "Obesity incidence per facility",
+       x = "Number of patients",
+       y = "",
+       fill = "Obesity") +
+  facet_grid(cols = vars(sex))
+```
+
+&lt;img src="slides_files/figure-html/unnamed-chunk-15-1.png" width="400" height="250" style="display: block; margin: auto;" /&gt;
+
+---
+## Facet grid
+
+
+```r
+ggplot(ob_count, 
+       aes(x = n, y = facility)) +
+  geom_col() +
+  labs(title = "Obesity incidence per facility",
+       x = "Number of patients",
+       y = "") +
+  facet_grid(rows = vars(obesity),
+             cols = vars(sex),
+             labeller = label_both)
+```
+
+&lt;img src="slides_files/figure-html/unnamed-chunk-16-1.png" width="400" height="250" style="display: block; margin: auto;" /&gt;
+
+---
+## Facet wrap
+
+
+```r
+ggplot(ob_count, 
+       aes(x = n, y = facility)) +
+  geom_col() +
+  labs(title = "Obesity incidence per facility",
+       x = "Number of patients",
+       y = "") +
+  facet_wrap(vars(sex, obesity), scales = "free_x",
+             labeller = label_both)
+```
+
+&lt;img src="slides_files/figure-html/unnamed-chunk-17-1.png" width="400" height="250" style="display: block; margin: auto;" /&gt;
+
+---
+# Let's practice!
+
+- Count the number of patients depending on their smoking status per ethnic group and asthma status.
+- Represent the data on a column plot, color them by asthma status 
+- Add a plot title, axis title and change the legend title to remove the underscores
+- Split the plots in columns and rows by smoking and asthma status
+
+---
+#	Statistical transformations
+
+
+```r
+sinai_covid %&gt;% 
+  mutate(asthma = case_when(asthma == 0 ~ "no",
+                            asthma == 1 ~ "yes"),
+         diabetes = case_when(diabetes == 0 ~ "no",
+                              diabetes == 1 ~ "yes")) %&gt;% 
+  ggplot(aes(x = age, y = log10(bmi))) +
+  geom_point() +
+  facet_wrap(vars(diabetes,asthma), scales = "free_y",
+             labeller = label_both)
+```
+
+&lt;img src="slides_files/figure-html/unnamed-chunk-18-1.png" width="400" height="250" style="display: block; margin: auto;" /&gt;
+
+---
+# Let's practice!
+
+- Write the code needed to get the following plot:
+&lt;img src="slides_files/figure-html/unnamed-chunk-19-1.png" width="70%" style="display: block; margin: auto;" /&gt;
+
+---
+
+- Possible Answer
+
+
+```r
+sinai_covid %&gt;% 
+  mutate(obesity = case_when(obesity == 0 ~ "no",
+                            obesity == 1 ~ "yes"),
+         diabetes = case_when(diabetes == 0 ~ "no",
+                              diabetes == 1 ~ "yes")) %&gt;% 
+  ggplot(aes(x = log10(bmi), y = race)) +
+  geom_boxplot() +
+  facet_wrap(vars(obesity, diabetes), 
+             labeller = label_both) +
+  labs(title = "Obesity and diabetes distribution by race",
+       y = "")
+```
+
+---
+# Scales
+
+
+```r
+ggplot(sinai_covid, aes(x = age, y = bmi, 
+           color = facility)) +
+  geom_point() +
+  scale_color_brewer(palette = 2)
+```
+
+&lt;img src="slides_files/figure-html/unnamed-chunk-21-1.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+- Invert scale direction
+
+
+```r
+ggplot(sinai_covid, 
+       aes(x = age, y = bmi, 
+           color = facility)) +
+  geom_point() +
+  scale_color_brewer(palette = 3, direction = -1)
+```
+
+&lt;img src="slides_files/figure-html/unnamed-chunk-22-1.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+- Using manual scale
+
+
+```r
+ggplot(sinai_covid, 
+       aes(x = age, y = bmi, 
+           color = facility)) +
+  geom_point() +
+  scale_color_manual(values = c("red", "blue","darkgreen",
+                                "orange", "pink"))
+```
+
+&lt;img src="slides_files/figure-html/unnamed-chunk-23-1.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+- Using manual scale. Look for "html color picker" on Google browser
+
+
+```r
+ggplot(sinai_covid, 
+       aes(x = age, y = bmi, 
+           color = facility)) +
+  geom_point() +
+  scale_color_manual(values = c("#eb4034", "#d19617", 
+                                         "#429642",
+                                "#31d5de","#3148de"))
+```
+
+&lt;img src="slides_files/figure-html/unnamed-chunk-24-1.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+---
+# Customized position
+
+
+```r
+count_smoking &lt;- sinai_covid %&gt;% 
+  group_by(asthma, sex) %&gt;% 
+  count(smoking_status) %&gt;% 
+  mutate(asthma = case_when(asthma == 0 ~ "no",
+                            asthma == 1 ~ "yes"),
+         asthma = factor(asthma, levels = c("yes", "no"))
+         )
+
+count_smoking[1:3,]
+```
+
+```
+## # A tibble: 3 × 4
+## # Groups:   asthma, sex [1]
+##   asthma sex    smoking_status     n
+##   &lt;fct&gt;  &lt;chr&gt;  &lt;chr&gt;          &lt;int&gt;
+## 1 no     FEMALE NEVER            148
+## 2 no     FEMALE QUIT              43
+## 3 no     FEMALE YES                7
+```
+
+---
+
+```r
+ggplot(count_smoking,
+       aes(x = smoking_status, 
+           y = n,
+           fill = asthma)) +
+  geom_col(position = position_dodge()) +
+  scale_x_discrete(limits = c("YES", "NEVER", "QUIT")) +
+  scale_fill_manual(values = c("yes" = "red",
+                               "no" = "blue")) +
+  facet_wrap(vars(sex))
+```
+
+&lt;img src="slides_files/figure-html/unnamed-chunk-26-1.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+---
+# Your turn!
+
+- Plot facility vs bmi
+- Use diabetes to color the boxplots
+- Change the order of facilities to put The Mount Sinai Hospital at the beginning 
+- Choose your favorite colors to modify the diabetes coloring 
+
+---
+#	Coordinate systems 
+
+- coord_flip 
+
+
+```r
+ggplot(sinai_covid,
+       aes(x = age, y = bmi)) +
+  geom_point() +
+  coord_flip()
+```
+
+&lt;img src="slides_files/figure-html/unnamed-chunk-27-1.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+---
+
+- coord_fixed 
+
+Makes x and y axis proportional to each other
+
+
+```r
+ggplot(sinai_covid,
+       aes(x = age, y = bmi)) +
+  geom_point() +
+  coord_fixed()
+```
+
+&lt;img src="slides_files/figure-html/unnamed-chunk-28-1.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+---
+
+- coord_polar 
+
+Used for navigation, considers direction and angle
+
+
+```r
+ggplot(sinai_covid,
+       aes(x = age, y = bmi)) +
+  geom_point() +
+  coord_polar()
+```
+
+&lt;img src="slides_files/figure-html/unnamed-chunk-29-1.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+---
+# Themes
+
+
+```r
+ggplot(sinai_covid, 
+       aes(x = age, y = bmi, 
+           color = facility)) +
+  geom_point() +
+  theme_bw()
+```
+
+&lt;img src="slides_files/figure-html/unnamed-chunk-30-1.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+---
+
+
+```r
+ggplot(ob_count, 
+       aes(x = facility, y = n, fill = factor(obesity))) +
+  geom_col(position = position_dodge()) +
+  labs(title = "Obesity incidence per facility",
+       x = "",
+       y = "Number of patients",
+       fill = "Obesity (0 = no, 1 = yes)") +
+  theme_bw(base_size = 12) +
+  theme(plot.title = element_text(hjust = 0.5),
+        axis.text.x = element_text(angle = 90)) 
+```
+
+&lt;img src="slides_files/figure-html/unnamed-chunk-31-1.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+---
+# Your turn!
+
+- Count the number of patients grouping by smoking status, ethnic group and asthma status
+- Plot the number of patients by ethnic group using vertical bars
+- Change bars color by asthma status
+- Add a plot title, axis titles and modify the legend title if needed
+- Explore the available themes and use one of them
+- Modify the angle and size of the axis text
+- Split in several plots by smoking status
+
+---
+.pull-left[&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+.center[
+# Thanks!
+]
+]
+
+.pull-right[&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;img src="img/thanks.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+.pull-right[Ilustration by Allison Horst]
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"self-contained": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

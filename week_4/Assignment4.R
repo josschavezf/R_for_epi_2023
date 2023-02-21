@@ -1,32 +1,40 @@
 ### Introduction to Epidemiology Data Analysis with R. 
 
-### Introduction to coding with R. Part II.
+### Introduction to coding with R. Part III.
 
-# Assignment week 3: 
-
-
-## Let's create a vector that contains the weight of three patients:
-
-patients_weight <- c("John" = 198, "Andrea" = 165, "Will" = 150)
-
-### 1) Use patients' names to get John and Will’s weight 
+# Assignment week 4: 
 
 
-### 2) Use a logical evaluation to select patients with 
-### a weight greater than 155 pounds
+## Let's create a list with immunization records from a patient
+
+patient_1 <- list(name = "Jane",
+                  last_name = "Doe",
+                  year = c(2010,2011,2012,2013,2014),
+                  vaccine = c("Hepatitis B", "Rotavirus","Tetanus","Influenza","Varicella"))
+
+### 1) Use brackets to extract the year and vaccines applied
 
 
-### 3) Remove Will from the vector
+### 2) Use $ to extract the vaccines component
 
 
-### 4) Add a new patien to the vector
+### 3) How would you extract the "Influenza" vaccine? 
 
 
-### 5) Replace John weight with a different number
+## Let's create a data frame
+
+vaccines <- data.frame(year = c(2010,2011,2012,2013,2014),
+                       vaccine = c("Hepatitis B", "Rotavirus","Tetanus","Influenza","Varicella"),
+                       doses_applied = c(205, 216, 192, 187, 209))
+
+### 4) Extract the column of vaccines and dosis applied
+
+
+### 5) Add a new row with the Measles vaccine that was applied on year 2015 using 200 doses
 
 
 
-## Let's create a matrix
+
 
 my_matrix <- matrix(1:30, ncol = 6)
 
