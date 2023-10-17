@@ -1,0 +1,386 @@
+"Hospital_Type","Facility_Name1","Facility_Name2","Facility_Name3","FACID1","FACID2","FACID3","County","Cases","Patient_Days","Incidence_Rate","X95._Confidence_Interval_Lower_Limit","X95._Confidence_Interval_Upper_Limit","Compared_To_Pooled_Mean_Rate","Case_Mix_Index"
+"CAH","Banner Lassen Medical Center, Susanville",".",".",230000008,".",".","Lassen",0,4772,0,0,6.28,"N",0.84
+"CAH","Biggs Gridley Memorial Hospital, Gridley",".",".",230000001,".",".","Butte",0,3107,0,0,9.64,"N",0.95
+"CAH","Catalina Island Medical Center, Avalon",".",".",930000013,".",".","Los Angeles",0,41,0,0,730.67,"N",0.85
+"CAH","Colorado River Medical Center, Needles",".",".",240000034,".",".","San Bernardino",0,1540,0,0,19.45,"N",0.82
+"CAH","Eastern Plumas Health Care, Portola",".",".",230000004,".",".","Plumas",0,889,0,0,33.7,"N",0.89
+"CAH","Fairchild Medical Center, Yreka",".",".",230000019,".",".","Siskiyou",0,5283,0,0,5.67,"N",1.01
+"CAH","Frank R. Howard Memorial Hospital, Willits",".",".",110000008,".",".","Mendocino",0,5742,0,0,5.22,"N",1.41
+"CAH","Glenn Medical Center, Willows",".",".",230000006,".",".","Glenn",0,755,0,0,39.68,"N",0.82
+"CAH","Healdsburg District Hospital",".",".",110000009,".",".","Sonoma",NA,NA,NA,NA,NA,".",NA
+"CAH","Jerold Phelps Community Hospital, Garberville",".",".",110000057,".",".","Humboldt",0,86,0,0,348.34,"N",0.91
+"CAH","John C. Fremont Healthcare District, Mariposa",".",".",40000105,".",".","Mariposa",0,9070,0,0,3.3,"N",0.95
+"CAH","Kern Valley Healthcare District, Lake Isabella",".",".",120000344,".",".","Kern",0,3292,0,0,9.1,"N",1.07
+"CAH","Mammoth Hospital",".",".",240000005,".",".","Mono",0,1597,0,0,18.76,"N",1.1
+"CAH","Mark Twain Medical Center, San andreas",".",".",30000120,".",".","Calaveras",0,4450,0,0,6.73,"N",1.17
+"CAH","Mayers Memorial Hospital, Fall River Mills",".",".",230000009,".",".","Shasta",0,1951,0,0,15.35,"N",0.82
+"CAH","Mendocino Coast District Hospital, Fort Bragg",".",".",110000023,".",".","Mendocino",0,5177,0,0,5.79,"N",1.15
+"CAH","Mercy Medical Center Mt. Shasta",".",".",230000012,".",".","Siskiyou",0,2882,0,0,10.39,"N",1.18
+"CAH","Modoc Medical Center, Alturas",".",".",230000011,".",".","Modoc",0,648,0,0,46.23,"N",0.96
+"CAH","Mountains Community Hospital, Lake Arrowhead",".",".",240000052,".",".","San Bernardino",0,1340,0,0,22.36,"N",0.91
+"CAH","Northern Inyo Hospital, Bishop",".",".",240000037,".",".","Inyo",0,3016,0,0,9.93,"N",0.93
+"CAH","Plumas District Hospital, Quincy",".",".",230000015,".",".","Plumas",NA,NA,NA,NA,NA,".",NA
+"CAH","Redwood Memorial Hospital, Fortuna",".",".",110000045,".",".","Humboldt",0,5468,0,0,5.48,"N",1
+"CAH","Ridgecrest Regional Hospital",".",".",120000409,".",".","Kern",0,7812,0,0,3.83,"N",0.99
+"CAH","Santa Ynez Valley Cottage Hospital, Solvang",".",".",50000030,".",".","Santa Barbara",0,594,0,0,50.43,"N",0.98
+"CAH","Seneca Healthcare District, Chester",".",".",230000017,".",".","Plumas",0,622,0,0,48.16,"N",0.9
+"CAH","Southern Inyo Hospital, Lone Pine",".",".",240000102,".",".","Inyo",0,162,0,0,184.92,"N",0.82
+"CAH","St Helena Hospital, Clearlake",".",".",110000044,".",".","Lake",0,5122,0,0,5.85,"N",0.96
+"CAH","Surprise Valley Community Hospital, Cedarville",".",".",230000021,".",".","Modoc",0,66,0,0,453.9,"N",0.85
+"CAH","Sutter Lakeside Hospital, Lakeport",".",".",110000019,".",".","Lake",0,6361,0,0,4.71,"N",1.19
+"CAH","Tahoe Forest Hospital, Truckee",".",".",230000265,".",".","Nevada",0,5099,0,0,5.88,"N",1.04
+"CAH","Tehachapi Hospital, Tehachapi",".",".",120000413,".",".","Kern",0,5008,0,0,5.98,"N",0.82
+"CAH","Trinity Hospital, Weaverville",".",".",230000022,".",".","Trinity",0,1855,0,0,16.15,"N",1.01
+"COM","Adventist Medical Center, Hanford","Adventist Medical Center-Selma",".",40000122,"630012960",".","Kings-Fresno",0,42875,0,0,0.7,"N",NA
+"COM","Adventist Medical Center, Reedley",".",".",40000124,".",".","Fresno",0,5970,0,0,5.02,"N",0.67
+"COM","AHMC Anaheim Regional Medical Center, Anaheim",".",".",60000002,".",".","Orange",1,51929,0.19,0,1.07,"N",1.25
+"COM","Alameda County Medical Center, Oakland","Alameda County Medical Center-Fairmont Campus, San Leandro",".",140000034,"140000184",".","Alameda",6,55590,1.08,0.4,2.35,"H",NA
+"COM","Alameda Hospital",".",".",140000011,".",".","Alameda",0,11520,0,0,2.6,"N",1.32
+"COM","Alhambra Hospital Medical Center",".",".",930000005,".",".","Los Angeles",0,19433,0,0,1.54,"N",1.51
+"COM","Alta Bates Summit Medical Center, Alta Bates Campus, Berkeley","Alta Bates Summit Medical Center, Herrick Campus, Berkeley",".",140000012,"140000006",".","Alameda",0,87153,0,0,0.34,"N",NA
+"COM","Alta Bates Summit Medical Center, Oakland","Alta Bates Summit Medical Center, Summit Campus, Oakland",".",140000425,"140000203",".","Alameda",4,66733,0.6,0.16,1.53,"N",NA
+"COM","Alvarado Hospital Medical Center, Campus #1, San Diego","Alvarado Hospital Medical Center, Campus #2, San Diego",".",90000013,"090000839",".","San Diego",0,30896,0,0,0.97,"N",NA
+"COM","Antelope Valley Hospital, Lancaster",".",".",930000008,".",".","Los Angeles",4,98897,0.4,0.11,1.04,"N",1.1
+"COM","Bakersfield Heart Hospital",".",".",120001330,".",".","Kern",0,16641,0,0,1.8,"N",1.77
+"COM","Bakersfield Memorial Hospital",".",".",120000338,".",".","Kern",2,68579,0.29,0.04,1.05,"N",1.19
+"COM","Barstow Community Hospital",".",".",240000001,".",".","San Bernardino",0,7666,0,0,3.91,"N",1.03
+"COM","Barton Memorial Hospital, South Lake Tahoe",".",".",30000114,".",".","El Dorado",0,7132,0,0,4.2,"N",1.17
+"COM","Bear Valley Community Hospital, Big Bear Lake",".",".",240000002,".",".","San Bernardino",0,655,0,0,45.74,"N",0.99
+"COM","Beverly Hospital, Montebello",".",".",930000012,".",".","Los Angeles",3,41440,0.72,0.15,2.12,"N",1.2
+"COM","California Hospital Medical Center, Los Angeles",".",".",930000002,".",".","Los Angeles",1,72364,0.14,0,0.77,"N",1.02
+"COM","California Pacific Medical Center, Davies Campus Hospital, SF",".",".",220000023,".",".","San Francisco",1,22050,0.45,0.01,2.53,"N",NA
+"COM","California Pacific Medical Center, Pacific Campus Hospital, SF","California Pacific Medical Center, CA West Campus  Hospital, SF",".",220000022,"220000002",".","San Francisco",6,109733,0.55,0.2,1.19,"N",NA
+"COM","California Pacific Medical Center, St Luke's Campus, San Francisco",".",".",220000018,".",".","San Francisco",1,16681,0.6,0.02,3.34,"N",1.11
+"COM","Centinela Hospital Medical Center, Inglewood",".",".",930000022,".",".","Los Angeles",1,72945,0.14,0,0.76,"N",1.41
+"COM","Central Valley General Hospital, Hanford",".",".",40000119,".",".","Kings",0,7289,0,0,4.11,"N",0.58
+"COM","Chapman Medical Center, Orange",".",".",60000006,".",".","Orange",0,11874,0,0,2.52,"N",1.37
+"COM","Chinese Hospital, San Francisco",".",".",220000003,".",".","San Francisco",0,11265,0,0,2.66,"N",1.19
+"COM","Chino Valley Medical Center, Chino",".",".",240000003,".",".","San Bernardino",0,14397,0,0,2.08,"N",1.21
+"COM","Citrus Valley Medical Center, IC , Covina","Citrus Valley Medical Center, QV,  West Covina",".",930000070,"930000132",".","Los Angeles",2,112102,0.18,0.02,0.64,"N",NA
+"COM","City of Hope Helford Clinical Research Hospital, Duarte",".",".",930000036,".",".","Los Angeles",14,60086,2.33,1.27,3.91,"H",2.27
+"COM","Clovis Community Medical Center",".",".",40000095,".",".","Fresno",2,53075,0.38,0.05,1.36,"N",0.94
+"COM","Coalinga Regional Medical Center",".",".",40000096,".",".","Fresno",0,976,0,0,30.69,"N",0.88
+"COM","Coast Plaza Hospital, Norwalk",".",".",930000038,".",".","Los Angeles",0,13790,0,0,2.17,"N",1.19
+"COM","Coastal Communities Hospital, Santa Ana",".",".",60000021,".",".","Orange",1,18750,0.53,0.01,2.97,"N",0.91
+"COM","College Hospital Costa Mesa",".",".",60000008,".",".","Orange",0,39515,0,0,0.76,"N",0.84
+"COM","Colusa Reg Medical Center",".",".",230000259,".",".","Colusa",0,2431,0,0,12.32,"N",0.85
+"COM","Community and Mission Hospital of Huntington Park",".",".",930000040,".",".","Los Angeles",0,14747,0,0,2.03,"N",NA
+"COM","Community Hospital Long Beach",".",".",930000082,".",".","Los Angeles",1,11242,0.89,0.02,4.96,"N",1.14
+"COM","Community Hospital of San Bernardino",".",".",240000082,".",".","San Bernardino",2,30736,0.65,0.08,2.35,"N",0.92
+"COM","Community Hospital of The Monterey Peninsula, Monterey",".",".",70000137,".",".","Monterey",0,47909,0,0,0.63,"N",1.37
+"COM","Community Memorial Hospital, San Buenaventura, Ventura",".",".",50000014,".",".","Ventura",0,51928,0,0,0.58,"N",1.28
+"COM","Contra Costa Regional Medical Center, Martinez",".",".",140000195,".",".","Contra Costa",1,44733,0.22,0.01,1.25,"N",0.92
+"COM","Corona Regional Medical Center, Campus #1","Corona Regional Medical Center, Campus #2",".",250000006,"250000007",".","Riverside",0,31611,0,0,0.95,"N",NA
+"COM","Dameron Hospital, Stockton",".",".",30000117,".",".","San Joaquin",0,32745,0,0,0.91,"N",1.26
+"COM","Delano Regional Medical Center",".",".",120000336,".",".","Kern",0,14294,0,0,2.1,"N",1
+"COM","Desert Regional Medical Center, Palm Springs",".",".",250000008,".",".","Riverside",0,77398,0,0,0.39,"N",1.28
+"COM","Desert Valley Hospital, Victorville",".",".",240001330,".",".","San Bernardino",1,32383,0.31,0.01,1.72,"N",1.27
+"COM","Doctors Hospital of Manteca",".",".",30000118,".",".","San Joaquin",0,15299,0,0,1.96,"N",0.97
+"COM","Doctors Hospital of West Covina, Inc, West Covina",".",".",930000188,".",".","Los Angeles",0,365,0,0,82.07,"N",1.35
+"COM","Doctors Medical Center, Modesto",".",".",30000122,".",".","Stanislaus",2,130323,0.15,0.02,0.55,"N",1.2
+"COM","Doctors Medical Center, San Pablo",".",".",110001204,".",".","Contra Costa",2,24463,0.82,0.1,2.95,"N",1.5
+"COM","Dominican Hospital",".",".",70000139,".",".","Santa Cruz",3,50605,0.59,0.12,1.73,"N",0.93
+"COM","Downey Regional Medical Center",".",".",930000052,".",".","Los Angeles",1,36504,0.27,0.01,1.53,"N",1.17
+"COM","East Los Angeles Doctors Hospital, Los Angeles",".",".",930000053,".",".","Los Angeles",1,27145,0.37,0.01,2.05,"N",1.03
+"COM","East Valley Hospital Medical Center, Glendora",".",".",930000060,".",".","Los Angeles",1,5950,1.68,0.04,9.36,"N",1.07
+"COM","Eden Medical Center, Castro Valley",".",".",140000183,".",".","Alameda",1,38677,0.26,0.01,1.44,"N",1.35
+"COM","Eisenhower Medical Center, Rancho Mirage",".",".",250000011,".",".","Riverside",1,77381,0.13,0,0.72,"N",1.54
+"COM","El Camino Hospital, Los Gatos",".",".",70000136,".",".","Santa Clara",0,15239,0,0,1.97,"N",NA
+"COM","El Camino Hospital, Mountain View",".",".",70001351,".",".","Santa Clara",0,68521,0,0,0.44,"N",1.18
+"COM","El Centro Regional Medical Center",".",".",90000040,".",".","Imperial",2,27358,0.73,0.09,2.64,"N",1.01
+"COM","Emanuel Medical Center Inc, Turlock",".",".",30000125,".",".","Stanislaus",2,43402,0.46,0.06,1.66,"N",1.07
+"COM","Encino Hospital Medical Center, Encino",".",".",930000054,".",".","Los Angeles",0,21534,0,0,1.39,"N",1.33
+"COM","Enloe Medical Center-Cohasset, Chico","Enloe Medical Center-Esplanade, Chico","Enloe Rehabilitation Center, Chico",230000013,"230000002","230000405","Butte",0,70412,0,0,0.43,"N",NA
+"COM","Fairview Developmental Center, Costa Mesa",".",".",170001767,".",".","Orange",0,313,0,0,95.71,"N",NA
+"COM","Fallbrook Hospital District",".",".",80000043,".",".","San Diego",0,5648,0,0,5.3,"N",1.02
+"COM","Feather River Hospital, Paradise",".",".",230000005,".",".","Butte",0,21853,0,0,1.37,"N",1.08
+"COM","Foothill Presbyterian Hospital-Johnston Memorial, Glendora",".",".",930000056,".",".","Los Angeles",0,19333,0,0,1.55,"N",1.08
+"COM","Fountain Valley Regional Hospital & Medical Center","Fountain Valley Regional Hospital & Medical Center",".",60000011,"060000936",".","Orange",0,90106,0,0,0.33,"N",NA
+"COM","Fremont Medical Center, Yuba City","Rideout Memorial Hospital, Marysville",".",230000261,"230000260",".","Sutter-Yuba",6,52865,1.14,0.42,2.47,"H",NA
+"COM","French Hospital Medical Center, San Luis Obispo",".",".",50000016,".",".","San Luis Obispo",1,15075,0.66,0.02,3.7,"N",1.36
+"COM","Fresno Heart and Surgical Hospital",".",".",40001397,".",".","Fresno",0,11669,0,0,2.57,"N",2.1
+"COM","Fresno Surgical Hospital",".",".",40000254,".",".","Fresno",0,3848,0,0,7.79,"N",2
+"COM","Garden Grove Hospital and Medical Center",".",".",60000058,".",".","Orange",0,22895,0,0,1.31,"N",1.11
+"COM","Garfield Medical Center, Monterey Park",".",".",930000058,".",".","Los Angeles",3,62108,0.48,0.1,1.41,"N",1.09
+"COM","George L. Mee Memorial Hospital, King City",".",".",70000141,".",".","Monterey",0,24944,0,0,1.2,"N",0.8
+"COM","Glendale Adventist Medical Center",".",".",930000059,".",".","Los Angeles",6,104313,0.58,0.21,1.25,"N",1.22
+"COM","Glendale Memorial Hospital and Health Center",".",".",930000093,".",".","Los Angeles",8,50287,1.59,0.69,3.13,"H",1.31
+"COM","Goleta Valley Cottage Hospital, Santa Barbara",".",".",50000017,".",".","Santa Barbara",0,14694,0,0,2.04,"N",NA
+"COM","Good Samaritan Hospital, Bakersfield",".",".",120000319,".",".","Kern",0,4381,0,0,6.84,"N",0.9
+"COM","Good Samaritan Hospital, Los Angeles",".",".",930000068,".",".","Los Angeles",3,66219,0.45,0.09,1.32,"N",1.23
+"COM","Good Samaritan Hospital, San Jose","Mission Oaks Hospital, Los Gatos",".",70000153,"070000154",".","Santa Clara",0,86728,0,0,0.35,"N",NA
+"COM","Greater El Monte Community Hospital, South El Monte",".",".",930000062,".",".","Los Angeles",0,15223,0,0,1.97,"N",1.04
+"COM","Grossmont Hospital, La Mesa",".",".",80000045,".",".","San Diego",0,123527,0,0,0.24,"L",1.31
+"COM","Hazel Hawkins Memorial Hospital, Hollister",".",".",70000142,".",".","San Benito",0,8316,0,0,3.6,"N",0.93
+"COM","Hemet Valley Medical Center",".",".",250000012,".",".","Riverside",5,44307,1.13,0.37,2.63,"H",1.2
+"COM","Henry Mayo Newhall Memorial Hospital, Valencia",".",".",930000063,".",".","Los Angeles",0,54515,0,0,0.55,"N",1.16
+"COM","Hi-Desert Medical Center, Joshua Tree",".",".",240000014,".",".","San Bernardino",0,10957,0,0,2.73,"N",1.01
+"COM","Hoag Memorial Hospital Presbyterian, Newport Beach","Hoag Hospital, Irvine",".",60000014,"060001022",".","Orange",4,119003,0.34,0.09,0.86,"N",NA
+"COM","Hoag Orthopedic Hospitalital",".",".",630012891,".",".","Orange",0,9712,0,0,3.08,"N",2.28
+"COM","Hollywood Presbyterian Medical Center, Los Angeles",".",".",930000065,".",".","Los Angeles",4,66057,0.61,0.16,1.55,"N",1.15
+"COM","Huntington Beach Hospital",".",".",60000015,".",".","Orange",3,19391,1.55,0.32,4.52,"H",1.43
+"COM","Huntington Memorial Hospital, Pasadena",".",".",930000026,".",".","Los Angeles",3,129418,0.23,0.05,0.68,"N",1.31
+"COM","John F. Kennedy Memorial Hospital, Indio",".",".",250000017,".",".","Riverside",0,24919,0,0,1.2,"N",1
+"COM","John Muir Medical Center, Concord",".",".",140000196,".",".","Contra Costa",2,41890,0.48,0.06,1.72,"N",1.77
+"COM","John Muir Medical Center, Walnut Creek",".",".",140000187,".",".","Contra Costa",1,86091,0.12,0,0.65,"N",1.4
+"COM","Kaiser Foundation Hospital & Rehab. Center, Vallejo",".",".",110000011,".",".","Solano",1,49230,0.2,0.01,1.13,"N",1.19
+"COM","Kaiser Foundation Hospital South Bay, Harbor City",".",".",930000071,".",".","Los Angeles",0,51145,0,0,0.59,"N",1.19
+"COM","Kaiser Foundation Hospital, Anaheim Medical Center","Kaiser Foundation Hospital-Lakeview Medical Center",".",630013929,"060000018",".","Orange",3,54901,0.55,0.11,1.6,"N",NA
+"COM","Kaiser Foundation Hospital, Antioch",".",".",630011203,".",".","Contra Costa",0,30201,0,0,0.99,"N",NA
+"COM","Kaiser Foundation Hospital, Baldwin Park",".",".",930001543,".",".","Los Angeles",1,47786,0.21,0.01,1.17,"N",1.09
+"COM","Kaiser Foundation Hospital, Downey, Bellflower",".",".",930000074,".",".","Los Angeles",1,73631,0.14,0,0.76,"N",1.16
+"COM","Kaiser Foundation Hospital, Fontana",".",".",240000024,".",".","San Bernardino",1,75170,0.13,0,0.74,"N",1.19
+"COM","Kaiser Foundation Hospital, Fresno",".",".",40000949,".",".","Fresno",0,26721,0,0,1.12,"N",1.22
+"COM","Kaiser Foundation Hospital, Hayward/Fremont","Kaiser Foundation Hospital, Fremont",".",140000189,"140001086",".","Alameda",1,54226,0.18,0,1.03,"N",NA
+"COM","Kaiser Foundation Hospital, Irvine",".",".",630011745,".",".","Orange",0,46106,0,0,0.65,"N",NA
+"COM","Kaiser Foundation Hospital, Manteca","Kaiser Foundation Hospital, Modesto",".",30000973,"630011683",".","Stanislaus-San Joaquin",2,31992,0.63,0.08,2.26,"N",NA
+"COM","Kaiser Foundation Hospital, Moreno Valley",".",".",630011959,".",".","Riverside",1,15315,0.65,0.02,3.64,"N",0.86
+"COM","Kaiser Foundation Hospital, Oakland/Richmond","Kaiser Foundation Hospital, Richmond Campus",".",140000188,"140000191",".","Alameda-Contra Costa",2,72948,0.27,0.03,0.99,"N",NA
+"COM","Kaiser Foundation Hospital, Ontario",".",".",630013398,".",".","San Bernardino",1,69352,0.14,0,0.8,"N",NA
+"COM","Kaiser Foundation Hospital, Panorama City",".",".",930000050,".",".","Los Angeles",1,47484,0.21,0.01,1.17,"N",1.13
+"COM","Kaiser Foundation Hospital, Redwood City",".",".",220000010,".",".","San Mateo",1,36339,0.28,0.01,1.53,"N",1.46
+"COM","Kaiser Foundation Hospital, Riverside",".",".",250000707,".",".","Riverside",0,48168,0,0,0.62,"N",1.14
+"COM","Kaiser Foundation Hospital, Roseville",".",".",30001370,".",".","Placer",0,76279,0,0,0.39,"N",1.22
+"COM","Kaiser Foundation Hospital, Sacramento",".",".",30000130,".",".","Sacramento",0,42589,0,0,0.7,"N",1.54
+"COM","Kaiser Foundation Hospital, San Diego",".",".",80000144,".",".","San Diego",1,100743,0.1,0,0.55,"N",1.16
+"COM","Kaiser Foundation Hospital, San Francisco",".",".",220000008,".",".","San Francisco",1,58663,0.17,0,0.95,"N",1.54
+"COM","Kaiser Foundation Hospital, San Jose",".",".",70000150,".",".","Santa Clara",1,49244,0.2,0.01,1.13,"N",1.23
+"COM","Kaiser Foundation Hospital, San Rafael",".",".",110000944,".",".","Marin",0,21655,0,0,1.38,"N",1.47
+"COM","Kaiser Foundation Hospital, Santa Clara",".",".",70001355,".",".","Santa Clara",4,87156,0.46,0.13,1.18,"N",1.38
+"COM","Kaiser Foundation Hospital, Santa Rosa",".",".",110000508,".",".","Sonoma",1,30155,0.33,0.01,1.85,"N",1.14
+"COM","Kaiser Foundation Hospital, South Sacramento",".",".",30000133,".",".","Sacramento",1,50451,0.2,0.01,1.1,"N",1.2
+"COM","Kaiser Foundation Hospital, South San Francisco",".",".",220000009,".",".","San Mateo",0,22271,0,0,1.35,"N",1.52
+"COM","Kaiser Foundation Hospital, Vacaville",".",".",630012364,".",".","Solano",0,18163,0,0,1.65,"N",1.33
+"COM","Kaiser Foundation Hospital, Walnut Creek",".",".",140000190,".",".","Contra Costa",0,65284,0,0,0.46,"N",1.23
+"COM","Kaiser Foundation Hospital, West LA, Los Angeles",".",".",930000076,".",".","Los Angeles",1,44560,0.22,0.01,1.25,"N",1.25
+"COM","Kaiser Foundation Hospital, Woodland Hills",".",".",930000290,".",".","Los Angeles",0,43385,0,0,0.69,"N",1.28
+"COM","Kaweah Delta Medical Center, Visalia",".",".",120001444,".",".","Tulare",2,114581,0.18,0.02,0.63,"N",1.21
+"COM","Kern Medical Center, Bakersfield",".",".",120000342,".",".","Kern",3,53831,0.56,0.11,1.63,"N",0.98
+"COM","La Palma Intercommunity Hospital",".",".",60000024,".",".","Orange",1,19319,0.52,0.01,2.88,"N",1.2
+"COM","LAC/Rancho Los Amigos National Rehab Center, Downey",".",".",60000028,".",".","Los Angeles",0,59694,0,0,0.5,"N",1.34
+"COM","Laguna Honda Hospital & Rehab Center, San Francisco",".",".",220000012,".",".","San Francisco",0,1184,0,0,25.3,"N",1.2
+"COM","Lakewood Regional Medical Center",".",".",930000047,".",".","Los Angeles",3,38077,0.79,0.16,2.3,"N",1.51
+"COM","Lanterman Developmental Center, Pomona",".",".",170001771,".",".","Los Angeles",0,423,0,0,70.82,"N",NA
+"COM","Lodi Memorial Hospital","Lodi Memorial Hospital-West",".",30000139,"030000136",".","San Joaquin",0,33545,0,0,0.89,"N",NA
+"COM","Loma Linda University Medical Center - Murrieta",".",".",630012971,".",".","Riverside",0,30800,0,0,0.97,"N",0.71
+"COM","Lompoc Valley Medical Center",".",".",50000018,".",".","Santa Barbara",0,9662,0,0,3.1,"N",1.06
+"COM","Long Beach Memorial Medical Center, Long Beach",".",".",930000095,".",".","Los Angeles",7,97550,0.72,0.29,1.48,"N",1.48
+"COM","Los Alamitos Medical Center",".",".",60000025,".",".","Orange",2,44652,0.45,0.05,1.62,"N",1.11
+"COM","Los Angeles Community Hospital","Norwalk Community Hospital",".",930000085,"930000112",".","Los Angeles",6,40651,1.48,0.54,3.21,"H",NA
+"COM","Los Robles Hospital & Medical Center, Thousand Oaks","Los Robles Hospital & Medical Center, E  , Thousand Oaks","Thousand Oaks Surgical Hospital",50000020,"050000553","050001468","Ventura",1,86935,0.12,0,0.64,"N",NA
+"COM","Mad River Community Hospital, Arcata",".",".",110000021,".",".","Humboldt",0,10214,0,0,2.93,"N",0.94
+"COM","Madera Community Hospital",".",".",40000111,".",".","Madera",0,23527,0,0,1.27,"N",0.86
+"COM","Marian Regional Medical Center",".",".",50000021,".",".","Santa Barbara",0,46082,0,0,0.65,"N",1.13
+"COM","Marian Regional Medical Center, Arroyo Grande",".",".",50000009,".",".","San Luis Obispo",1,8281,1.21,0.03,6.73,"N",1.4
+"COM","Marin General Hospital, Greenbrae",".",".",110000953,".",".","Marin",1,43040,0.23,0.01,1.29,"N",1.3
+"COM","Marina Del Rey Hospital",".",".",930000044,".",".","Los Angeles",0,14800,0,0,2.02,"N",1.68
+"COM","Marshall Medical Center (1-Rh), Placerville",".",".",30000121,".",".","El Dorado",0,21607,0,0,1.39,"N",1.23
+"COM","Memorial Hospital Los Banos",".",".",40000110,".",".","Merced",0,4872,0,0,6.15,"N",0.73
+"COM","Memorial Hospital of Gardena",".",".",930000092,".",".","Los Angeles",2,25419,0.79,0.1,2.84,"N",1.19
+"COM","Memorial Medical Center, Modesto",".",".",30000123,".",".","Stanislaus",3,93686,0.32,0.07,0.94,"N",1.37
+"COM","Menifee Valley Medical Center, Sun City",".",".",250000727,".",".","Riverside",1,12434,0.8,0.02,4.48,"N",1.29
+"COM","Menlo Park Surgical Hospital",".",".",220000716,".",".","San Mateo",0,405,0,0,73.97,"N",1.11
+"COM","Mercy General Hospital, Sacramento",".",".",30000124,".",".","Sacramento",1,73133,0.14,0,0.76,"N",1.63
+"COM","Mercy Hospital of Folsom",".",".",30000901,".",".","Sacramento",0,21043,0,0,1.42,"N",1.11
+"COM","Mercy Hospital, Bakersfield","Mercy Southwest Hospital, Bakersfield",".",120000404,"120000701",".","Kern",0,49248,0,0,0.61,"N",NA
+"COM","Mercy Medical Center Merced",".",".",40000113,".",".","Merced",1,48166,0.21,0.01,1.16,"N",1.04
+"COM","Mercy Medical Center Redding",".",".",230000010,".",".","Shasta",0,59819,0,0,0.5,"N",1.5
+"COM","Mercy San Juan Medical Center, Carmichael",".",".",30000127,".",".","Sacramento",2,98195,0.2,0.02,0.74,"N",1.37
+"COM","Methodist Hospital of Sacramento",".",".",30000037,".",".","Sacramento",1,39896,0.25,0.01,1.4,"N",1.25
+"COM","Methodist Hospital of Southern CA, Arcadia",".",".",930000096,".",".","Los Angeles",2,71832,0.28,0.03,1.01,"N",1.29
+"COM","Mills-Peninsula Medical Center, Burlingame","Mills Health Center, San Mateo",".",220000017,"220000004",".","San Mateo",0,50203,0,0,0.6,"N",NA
+"COM","Miracle Mile Medical Center, Los Angeles",".",".",930000158,".",".","Los Angeles",0,621,0,0,48.24,"N",2.66
+"COM","Mission Community Hospital, Panorama",".",".",930000027,".",".","Los Angeles",1,42422,0.24,0.01,1.31,"N",1.2
+"COM","Mission Hospital Laguna Beach",".",".",60000066,".",".","Orange",0,18685,0,0,1.6,"N",0.97
+"COM","Mission Hospital Regional Medical Center, Mission Viejo",".",".",60000060,".",".","Orange",1,71061,0.14,0,0.78,"N",1.25
+"COM","Montclair Hospital Medical Center",".",".",240000009,".",".","San Bernardino",0,13736,0,0,2.18,"N",0.98
+"COM","Monterey Park Hospital",".",".",930000108,".",".","Los Angeles",0,14799,0,0,2.02,"N",0.82
+"COM","Motion Picture & Television Hospital, Woodland Hills",".",".",930000109,".",".","Los Angeles",0,566,0,0,52.93,"N",0.96
+"COM","Natividad Medical Center, Salinas",".",".",70000145,".",".","Monterey",2,39092,0.51,0.06,1.85,"N",0.88
+"COM","Northbay Medical Center, Fairfield",".",".",110000010,".",".","Solano",0,31764,0,0,0.94,"N",1.16
+"COM","Northbay Vacavalley Hospital, Vacaville",".",".",110000378,".",".","Solano",1,10447,0.96,0.02,5.33,"N",1.33
+"COM","Northridge Hospital Medical Center",".",".",930000111,".",".","Los Angeles",1,67177,0.15,0,0.83,"N",1.23
+"COM","Novato Community Hospital",".",".",110000982,".",".","Marin",0,5175,0,0,5.79,"N",1.54
+"COM","Oak Valley Hospital District   (2-Rh), Oakdale",".",".",30000131,".",".","Stanislaus",0,4212,0,0,7.11,"N",0.97
+"COM","O'connor Hospital, San Jose",".",".",70000146,".",".","Santa Clara",2,45329,0.44,0.05,1.59,"N",1.1
+"COM","Ojai Valley Community Hospital, Ojai",".",".",50000023,".",".","Ventura",0,2381,0,0,12.58,"N",1.27
+"COM","Olympia Medical Center, Los Angeles",".",".",930000105,".",".","Los Angeles",1,29311,0.34,0.01,1.9,"N",1.64
+"COM","Orange Coast Memorial Medical Center, Fountain Valley",".",".",60000208,".",".","Orange",0,49060,0,0,0.61,"N",1.21
+"COM","Oroville Hospital",".",".",230000014,".",".","Butte",1,43882,0.23,0.01,1.27,"N",1.12
+"COM","Pacific Alliance Medical Center",".",".",930000057,".",".","Los Angeles",1,30607,0.33,0.01,1.82,"N",0.87
+"COM","Pacifica Hospital of The Valley, Sun Valley",".",".",930000133,".",".","Los Angeles",0,27153,0,0,1.1,"N",0.94
+"COM","Palm Drive Hospital, Sebastopol",".",".",110000038,".",".","Sonoma",0,3667,0,0,8.17,"N",1.53
+"COM","Palmdale Regional Medical Center",".",".",930000077,".",".","Los Angeles",2,34876,0.57,0.07,2.07,"N",1.44
+"COM","Palo Verde Hospital, Blythe",".",".",250000042,".",".","Riverside",0,3982,0,0,7.52,"N",0.9
+"COM","Palomar Health Downtown Campus, Escondido","Palomar Medical Center, Escondido",".",80000142,"630013873",".","San Diego",1,104933,0.1,0,0.53,"N",NA
+"COM","Paradise Valley Hospital, National City",".",".",90000145,".",".","San Diego",0,56611,0,0,0.53,"N",1.09
+"COM","Parkview Community Hospital Medical Center, Riverside",".",".",250000044,".",".","Riverside",2,40485,0.49,0.06,1.78,"N",1.04
+"COM","Patients' Hospital of Redding",".",".",230000444,".",".","Shasta",0,630,0,0,47.55,"N",1.3
+"COM","Petaluma Valley Hospital, Petaluma",".",".",110000040,".",".","Sonoma",0,8939,0,0,3.35,"N",1.19
+"COM","Pioneers Memorial Healthcare District, Brawley",".",".",90000146,".",".","Imperial",0,18947,0,0,1.58,"N",0.91
+"COM","Placentia Linda Hospital",".",".",60000062,".",".","Orange",0,14679,0,0,2.04,"N",1.25
+"COM","Pomerado Hospital, Poway",".",".",80000147,".",".","San Diego",0,29001,0,0,1.03,"N",1.17
+"COM","Pomona Valley Hospital Medical Center, Pomona",".",".",930000123,".",".","Los Angeles",1,106314,0.09,0,0.52,"N",1.13
+"COM","Porterville Developmental Center",".",".",170001874,".",".","Tulare",0,1234,0,0,24.28,"N",NA
+"COM","Presbyterian Intercommunity Hospital, Whittier",".",".",930000099,".",".","Los Angeles",0,78497,0,0,0.38,"N",1.3
+"COM","Providence Holy Cross Medical Center, Mission Hills",".",".",930000066,".",".","Los Angeles",4,86914,0.46,0.13,1.18,"N",1.31
+"COM","Providence Little Company of Mary Medical Center, San Pedro",".",".",930000157,".",".","Los Angeles",1,29301,0.34,0.01,1.9,"N",1.09
+"COM","Providence Little Company of Mary Medical Center, Torrance",".",".",930000081,".",".","Los Angeles",5,72237,0.69,0.22,1.62,"N",1.17
+"COM","Providence Saint Joseph Medical Center, Burbank",".",".",930000101,".",".","Los Angeles",11,84710,1.3,0.65,2.32,"H",1.34
+"COM","Providence Tarzana Medical Center, Tarzana",".",".",930000091,".",".","Los Angeles",4,59739,0.67,0.18,1.71,"N",1.19
+"COM","Queen of The Valley Medical Center, Napa",".",".",110000041,".",".","Napa",2,34378,0.58,0.07,2.1,"N",1.4
+"COM","Redlands Community Hospital",".",".",240000046,".",".","San Bernardino",1,49801,0.2,0.01,1.12,"N",1.13
+"COM","Regional Medical Center of San Jose",".",".",70000133,".",".","Santa Clara",5,64720,0.77,0.25,1.8,"N",1.55
+"COM","Riverside Community Hospital",".",".",250000049,".",".","Riverside",11,101659,1.08,0.54,1.94,"H",1.37
+"COM","Saddleback Memorial Medical Center, Laguna Hills","Saddleback Memorial Medical Center-San Clemente",".",60000063,"060000064",".","Orange",0,57126,0,0,0.52,"N",NA
+"COM","Saint Agnes Medical Center, Fresno",".",".",40000126,".",".","Fresno",2,90148,0.22,0.03,0.8,"N",1.27
+"COM","Saint Francis Medical Center, Lynwood",".",".",930000128,".",".","Los Angeles",3,97109,0.31,0.06,0.9,"N",1.05
+"COM","Saint Francis Memorial Hospital, San Francisco",".",".",220000029,".",".","San Francisco",3,29127,1.03,0.21,3.01,"N",1.45
+"COM","Saint John's Health Center, Santa Monica",".",".",930000100,".",".","Los Angeles",1,55087,0.18,0,1.01,"N",1.56
+"COM","Saint Louise Regional Hospital, Gilroy",".",".",70000635,".",".","Santa Clara",0,10319,0,0,2.9,"N",1.07
+"COM","Saint Vincent Medical Center, Los Angeles",".",".",930000104,".",".","Los Angeles",4,42049,0.95,0.26,2.44,"N",1.62
+"COM","Salinas Valley Memorial Hospital",".",".",70000147,".",".","Monterey",0,49123,0,0,0.61,"N",1.3
+"COM","San Antonio Community Hospital, Upland",".",".",240000053,".",".","San Bernardino",3,56400,0.53,0.11,1.55,"N",1.32
+"COM","San Dimas Community Hospital",".",".",930000125,".",".","Los Angeles",0,14646,0,0,2.05,"N",1.08
+"COM","San Gabriel Valley Medical Center, San Gabriel",".",".",930000041,".",".","Los Angeles",3,35043,0.86,0.18,2.5,"N",1.09
+"COM","San Gorgonio Memorial Hospital, Banning",".",".",250000101,".",".","Riverside",1,15226,0.66,0.02,3.66,"N",1.08
+"COM","San Joaquin Community Hospital, Bakersfield",".",".",120000411,".",".","Kern",0,73810,0,0,0.41,"N",1.23
+"COM","San Joaquin General Hospital, French Camp",".",".",30000135,".",".","San Joaquin",3,40233,0.75,0.15,2.18,"N",1.06
+"COM","San Leandro Hospital",".",".",630013913,".",".","Alameda",2,12689,1.58,0.19,5.69,"N",NA
+"COM","San Mateo Medical Center",".",".",220000007,".",".","San Mateo",0,19735,0,0,1.52,"N",1.18
+"COM","San Ramon Regional Medical Center","San Ramon Regional Medical Center South Building",".",140000704,"140000683",".","Contra Costa",0,17255,0,0,1.74,"N",NA
+"COM","Santa Barbara Cottage Hospital","Cottage Rehabilitation Hospital at Santa Barbara",".",50000280,"050000022",".","Santa Barbara",1,88495,0.11,0,0.63,"N",NA
+"COM","Santa Rosa Memorial Hospital",".",".",140001268,".",".","Sonoma",0,57490,0,0,0.52,"N",1.54
+"COM","Scripps Green Hospital, La Jolla",".",".",80000022,".",".","San Diego",4,38847,1.03,0.28,2.64,"N",1.93
+"COM","Scripps Memorial Hospital, Encinitas",".",".",80000150,".",".","San Diego",0,42417,0,0,0.71,"N",1.27
+"COM","Scripps Memorial Hospital, La Jolla",".",".",80000149,".",".","San Diego",1,76002,0.13,0,0.73,"N",1.37
+"COM","Sequoia Hospital, Redwood City",".",".",220000025,".",".","San Mateo",0,21955,0,0,1.36,"N",1.35
+"COM","Seton Medical Center, Daly City","Seton Medical Center-Coastside, Moss Beach",".",220000026,"220000028",".","San Mateo",1,49113,0.2,0.01,1.13,"N",NA
+"COM","Sharp Chula Vista Medical Center",".",".",90000021,".",".","San Diego",4,69155,0.58,0.16,1.48,"N",1.22
+"COM","Sharp Coronado Hospital and Healthcare Center",".",".",90000033,".",".","San Diego",1,7647,1.31,0.03,7.29,"N",1.75
+"COM","Sharp Mary Birch for Women & Newborns, San Diego",".",".",80001470,".",".","San Diego",0,74250,0,0,0.4,"N",NA
+"COM","Sharp Memorial Hospital, San Diego",".",".",80000036,".",".","San Diego",1,94340,0.11,0,0.59,"N",1.26
+"COM","Shasta Regional Medical Center, Redding",".",".",230000016,".",".","Shasta",1,29391,0.34,0.01,1.9,"N",1.55
+"COM","Sherman Oaks Hospital",".",".",930000140,".",".","Los Angeles",1,26937,0.37,0.01,2.07,"N",1.51
+"COM","Sierra Nevada Memorial Hospital, Grass Valley",".",".",230000262,".",".","Nevada",0,17439,0,0,1.72,"N",1.16
+"COM","Sierra View District Hospital, Porterville",".",".",120001464,".",".","Tulare",0,25055,0,0,1.2,"N",1.02
+"COM","Sierra Vista Regional Medical Center, San Luis Obispo",".",".",50000031,".",".","San Luis Obispo",0,22877,0,0,1.31,"N",1.16
+"COM","Silver Lake Medical Center, Los Angeles",".",".",930000035,".",".","Los Angeles",3,14494,2.07,0.43,6.05,"H",1.2
+"COM","Simi Valley Hospital & Health Care Services",".",".",50000455,".",".","Ventura",3,22976,1.31,0.27,3.82,"N",1.19
+"COM","Sonoma Developmental Center, Eldridge",".",".",150000050,".",".","Sonoma",0,1265,0,0,23.68,"N",NA
+"COM","Sonoma Valley Hospital",".",".",110000056,".",".","Sonoma",0,4773,0,0,6.28,"N",1.3
+"COM","Sonora Regional Medical Center Campus #1","Sonora Regional Medical Center Campus #2",".",30001799,"030000365",".","Tuolumne",1,20356,0.49,0.01,2.74,"N",NA
+"COM","Southern California Hospital at Culiver City",".",".",930000015,".",".","Los Angeles",3,69517,0.43,0.09,1.26,"N",1.2
+"COM","Southern California Hospital at Hollywood",".",".",930000064,".",".","Los Angeles",4,17054,2.35,0.64,6.01,"H",1.23
+"COM","Southwest Healthcare Systems, Murrieta","Southwest Healthcare Systems, Wildomar",".",250000507,"250000344",".","Riverside",0,59616,0,0,0.5,"N",NA
+"COM","St Bernardine Medical Center",".",".",240000103,".",".","San Bernardino",6,69155,0.87,0.32,1.89,"H",1.62
+"COM","St Elizabeth Community Hospital, Red Bluff",".",".",230000020,".",".","Tehama",0,10066,0,0,2.98,"N",1.03
+"COM","St Helena Hospital, St Helena",".",".",110000058,".",".","Napa",0,17180,0,0,1.74,"N",1.55
+"COM","St John's Pleasant Valley Hospital, Arillo",".",".",50000026,".",".","Ventura",0,13116,0,0,2.28,"N",1.28
+"COM","St John's Regional Medical Center, Oxnard",".",".",50000035,".",".","Ventura",1,49428,0.2,0.01,1.13,"N",1.25
+"COM","St Joseph Hospital, Eureka",".",".",110000067,".",".","Humboldt",0,27984,0,0,1.07,"N",1.5
+"COM","St Joseph Hospital, Orange",".",".",60000067,".",".","Orange",2,86265,0.23,0.03,0.84,"N",1.35
+"COM","St Joseph's Medical Center of Stockton",".",".",30000143,".",".","San Joaquin",1,74248,0.14,0,0.75,"N",1.35
+"COM","St Jude Medical Center, Fullerton",".",".",60000068,".",".","Orange",4,62978,0.64,0.17,1.63,"N",1.39
+"COM","St Mary Medical Center, Apple Valley",".",".",240000104,".",".","San Bernardino",1,66404,0.15,0,0.84,"N",1.16
+"COM","St Mary Medical Center, Long Beach",".",".",930000103,".",".","Los Angeles",3,54436,0.55,0.11,1.61,"N",1.03
+"COM","St Mary's Medical Center, San Francisco",".",".",220000030,".",".","San Francisco",0,34270,0,0,0.87,"N",1.55
+"COM","St Rose Hospital, Hayward",".",".",140000041,".",".","Alameda",2,30811,0.65,0.08,2.34,"N",1.17
+"COM","Stanislaus Surgical Hospital, Modesto",".",".",30001661,".",".","Stanislaus",0,1604,0,0,18.68,"N",1.82
+"COM","Sutter Amador Hospital, Jackson",".",".",30000108,".",".","Amador",0,8170,0,0,3.67,"N",1.08
+"COM","Sutter Auburn Faith Hospital, Auburn",".",".",30000109,".",".","Placer",1,12274,0.82,0.02,4.54,"N",1.35
+"COM","Sutter Coast Hospital, Crescent City",".",".",110000049,".",".","Del Norte",0,7326,0,0,4.09,"N",1.1
+"COM","Sutter Davis Hospital, Davis",".",".",30000149,".",".","Yolo",0,11850,0,0,2.53,"N",0.92
+"COM","Sutter Delta Medical Center, Antioch",".",".",140000016,".",".","Contra Costa",0,28545,0,0,1.05,"N",1.12
+"COM","Sutter General Hospital, Sacramento","Sutter Memorial Hospital, Sacramento",".",30000151,"030000112",".","Sacramento",7,136410,0.51,0.21,1.06,"N",NA
+"COM","Sutter Maternity & Surgery Center of Santa Cruz",".",".",70000959,".",".","Santa Cruz",0,5789,0,0,5.17,"N",0.83
+"COM","Sutter Medical Center of Santa Rosa",".",".",110000007,".",".","Sonoma",0,28918,0,0,1.04,"N",1.24
+"COM","Sutter Roseville Medical Center",".",".",30000134,".",".","Placer",0,88612,0,0,0.34,"N",1.29
+"COM","Sutter Solano Medical Center, Vallejo",".",".",110000068,".",".","Solano",0,19456,0,0,1.54,"N",1.22
+"COM","Sutter Surgical Hospital, North Valley, Yuba City",".",".",630011844,".",".","Sutter",0,1571,0,0,19.07,"N",1.64
+"COM","Sutter Tracy Community Hospital",".",".",30000141,".",".","San Joaquin",0,12599,0,0,2.38,"N",1.03
+"COM","Temple Community Hospital, Los Angeles",".",".",930000143,".",".","Los Angeles",0,9376,0,0,3.2,"N",1.23
+"COM","Torrance Memorial Medical Center, Torrance",".",".",930000127,".",".","Los Angeles",2,86421,0.23,0.03,0.84,"N",1.27
+"COM","Tri-City Medical Center, Oceanside",".",".",80000152,".",".","San Diego",1,72686,0.14,0,0.77,"N",1.21
+"COM","Tri-City Regional Medical Center, Hawaiian Gardens",".",".",930000032,".",".","Los Angeles",0,15388,0,0,1.95,"N",1.72
+"COM","Tulare Regional Medical Center",".",".",120001467,".",".","Tulare",0,17062,0,0,1.76,"N",0.88
+"COM","Twin Cities Community Hospital, Templeton",".",".",50000037,".",".","San Luis Obispo",0,19891,0,0,1.51,"N",1.02
+"COM","Ukiah Valley Medical Center/Hospital Drive, Ukiah",".",".",110000070,".",".","Mendocino",0,13300,0,0,2.25,"N",1.04
+"COM","USC Verdugo Hills Hospital, Glendale",".",".",930000187,".",".","Los Angeles",1,24548,0.41,0.01,2.27,"N",1.12
+"COM","Valley Presbyterian Hospital, Van Nuys",".",".",930000129,".",".","Los Angeles",2,69450,0.29,0.03,1.04,"N",1.1
+"COM","Valleycare Medical Center, Pleasanton","Valley Memorial Hospital, Livermore",".",140000797,"140000199",".","Alameda",0,32240,0,0,0.93,"N",NA
+"COM","Ventura County Medical Center","Ventura County Medical Center, Santa Paula Hospital",".",50000039,"630010957",".","Ventura",1,56074,0.18,0,0.99,"N",NA
+"COM","Victor Valley Community Hospital, Victorville",".",".",240000054,".",".","San Bernardino",0,23395,0,0,1.28,"N",0.96
+"COM","Washington Hospital, Fremont",".",".",140000118,".",".","Alameda",9,58203,1.55,0.71,2.94,"H",1.35
+"COM","Watsonville Community Hospital",".",".",70000155,".",".","Santa Cruz",0,18983,0,0,1.58,"N",1.02
+"COM","West Anaheim Medical Center, Anaheim",".",".",60000016,".",".","Orange",0,30907,0,0,0.97,"N",1.55
+"COM","West Hills Hospital and Medical Center",".",".",930000028,".",".","Los Angeles",2,43512,0.46,0.06,1.66,"N",1.42
+"COM","Western Medical Center  Anaheim",".",".",60000074,".",".","Orange",1,40553,0.25,0.01,1.37,"N",0.87
+"COM","Western Medical Center Santa Ana",".",".",60000073,".",".","Orange",1,34532,0.29,0.01,1.61,"N",1.35
+"COM","White Memorial Medical Center, Los Angeles",".",".",930000191,".",".","Los Angeles",0,97316,0,0,0.31,"N",1.1
+"COM","Whittier Hospital Medical Center",".",".",930000151,".",".","Los Angeles",1,30883,0.32,0.01,1.8,"N",0.95
+"COM","Woodland Memorial Hospital",".",".",30000146,".",".","Yolo",0,9929,0,0,3.02,"N",1.07
+"LTAC","Barlow Respiratory Hospital,  Los Angeles",".",".",930000014,".",".","Los Angeles",5,24704,2.02,0.66,4.72,"N",3.21
+"LTAC","Kentfield Rehab & Specialty Hospital, Kentfield",".",".",110000946,".",".","Marin",0,16345,0,0,1.83,"L",2.43
+"LTAC","Kindred Hospital Rancho, Rancho Cucamonga",".",".",240001515,".",".","San Bernardino",9,17094,5.27,2.41,9.99,"H",2.84
+"LTAC","Kindred Hospital Riverside, Perris",".",".",250000004,".",".","Riverside",3,12033,2.49,0.51,7.29,"N",3.52
+"LTAC","Kindred Hospital South Bay, Gardena",".",".",930000039,".",".","Los Angeles",7,18172,3.85,1.55,7.94,"N",2.47
+"LTAC","Kindred Hospital South Bay, Hawaiian Gardens",".",".",930000039,".",".","Los Angeles",2,9268,2.16,0.26,7.8,"N",NA
+"LTAC","Kindred Hospital, Baldwin Park",".",".",930000144,".",".","Los Angeles",8,27223,2.94,1.27,5.79,"N",2.88
+"LTAC","Kindred Hospital, Brea",".",".",60001360,".",".","Orange",0,14747,0,0,2.03,"L",2.14
+"LTAC","Kindred Hospital, La Mirada",".",".",930000089,".",".","Los Angeles",3,21201,1.42,0.29,4.14,"N",2.23
+"LTAC","Kindred Hospital, Los Angeles",".",".",930000088,".",".","Los Angeles",10,27196,3.68,1.76,6.76,"N",2.97
+"LTAC","Kindred Hospital, Ontario",".",".",240000040,".",".","San Bernardino",5,25645,1.95,0.63,4.55,"N",2.9
+"LTAC","Kindred Hospital, San Diego",".",".",90000048,".",".","San Diego",0,18195,0,0,1.65,"L",2.41
+"LTAC","Kindred Hospital, Santa Ana",".",".",930001607,".",".","Orange",10,18256,5.48,2.63,10.07,"H",NA
+"LTAC","Kindred Hospital, Westminster",".",".",60000017,".",".","Orange",4,33935,1.18,0.32,3.02,"N",2.68
+"LTAC","Kindred Hospital-San Francisco Bay Area, San Leandro",".",".",140000148,".",".","Alameda",3,19555,1.53,0.32,4.48,"N",3.77
+"LTAC","Kindred Hospital-San Gabriel Valley, West Covina",".",".",930000042,".",".","Los Angeles",5,19393,2.58,0.84,6.02,"N",NA
+"LTAC","Monrovia Memorial Hospital",".",".",930000107,".",".","Los Angeles",0,13548,0,0,2.21,"N",2.55
+"LTAC","Promise Hospital of East LA-East L.A Campus, Los Angeles",".",".",930000003,".",".","Los Angeles",5,8823,5.67,1.84,13.22,"N",2.56
+"LTAC","Promise Hospital of East LA-Suburban Campus, Paramount",".",".",930000033,".",".","Los Angeles",15,42303,3.55,1.98,5.85,"N",NA
+"LTAC","Promise Hospital of San Diego",".",".",90000155,".",".","San Diego",2,15391,1.3,0.16,4.69,"N",1.55
+"LTAC","Vibra Hospital of Northern California",".",".",230000422,".",".","Shasta",2,17087,1.17,0.14,4.23,"N",NA
+"LTAC","Vibra Hospital of Sacramento",".",".",30000907,".",".","Sacramento",1,12392,0.81,0.02,4.5,"N",3.03
+"LTAC","Vibra Hospital of San Diego",".",".",90000977,".",".","San Diego",2,27841,0.72,0.09,2.59,"N",2.11
+"MTAC","Arrowhead Regional Medical Center, Colton",".",".",240000100,".",".","San Bernardino",6,109458,0.55,0.2,1.19,"N",1.1
+"MTAC","Cedars-Sinai Medical Center, Los Angeles",".",".",930000004,".",".","Los Angeles",32,267626,1.2,0.82,1.69,"N",1.54
+"MTAC","Community Regional Medical Center, Fresno",".",".",40000101,".",".","Fresno",18,196889,0.91,0.54,1.44,"N",1.32
+"MTAC","Kaiser Foundation Hospital, Los Angeles",".",".",930000072,".",".","Los Angeles",6,111087,0.54,0.2,1.18,"N",1.62
+"MTAC","Keck Hospital of USC, Los Angeles",".",".",930000912,".",".","Los Angeles",17,78823,2.16,1.26,3.45,"H",2.38
+"MTAC","LAC/Harbor-UCLA Medical Center, Torrance",".",".",60000027,".",".","Los Angeles",5,101554,0.49,0.16,1.15,"N",1.38
+"MTAC","LAC+USC Medical Center, Los Angeles",".",".",60000040,".",".","Los Angeles",19,175593,1.08,0.65,1.69,"N",1.26
+"MTAC","Loma Linda UNIV Medical Center, Loma Linda","Loma Linda UNIV Heart & Surgical Hospital, Redlands","Loma Linda UNIV Medical Center East Hospital, Loma Linda",240000027,"240000025","630012294","San Bernardino",15,198554,0.76,0.42,1.25,"N",NA
+"MTAC","Los Angeles Co Olive View-UCLA Medical Center, Sylmar",".",".",60000038,".",".","Los Angeles",8,68082,1.18,0.51,2.32,"N",1.09
+"MTAC","Riverside County Regional Medical Center, Moreno Valley",".",".",250000050,".",".","Riverside",7,92322,0.76,0.3,1.56,"N",1.05
+"MTAC","Ronald Reagan UCLA Medical Center, Los Angeles",".",".",930000162,".",".","Los Angeles",40,150797,2.65,1.9,3.61,"H",1.96
+"MTAC","San Francisco General Hospital",".",".",220000019,".",".","San Francisco",1,89715,0.11,0,0.62,"L",1.2
+"MTAC","Santa Clara Valley Medical Center, San Jose",".",".",70000149,".",".","Santa Clara",9,134979,0.67,0.3,1.27,"N",1.17
+"MTAC","Santa Monica, UCLA Medical Center and Orthopaedic",".",".",930000049,".",".","Los Angeles",5,77450,0.65,0.21,1.51,"N",1.31
+"MTAC","Scripps Mercy Hospital, San Diego","Scripps Mercy Hospital Chula Vista",".",90000025,"090000016",".","San Diego",6,156391,0.38,0.14,0.84,"L",NA
+"MTAC","Stanford Hospital, Stanford",".",".",70001357,".",".","Santa Clara",23,142400,1.62,1.02,2.42,"N",1.99
+"MTAC","UCSF Medical Center, San Francisco","UCSF Medical Center at Mount Zion, San Francisco",".",220000031,"220000015",".","San Francisco",30,189723,1.58,1.07,2.26,"H",NA
+"MTAC","University of California Davis Medical Center, Sacramento",".",".",30000113,".",".","Sacramento",19,174935,1.09,0.65,1.7,"N",1.63
+"MTAC","University of California Irvine Medical Center, Orange",".",".",60000071,".",".","Orange",11,111070,0.99,0.49,1.77,"N",1.59
+"MTAC","University of California, San Diego Medical Center","UCSD-La Jolla, John M.& Sally B. Thornton Hospital",".",90000154,"090001116",".","San Diego",14,159436,0.88,0.48,1.47,"N",NA
+"MTAC","USC Kenneth Norris Jr. Cancer Hospital, Los Angeles",".",".",930000163,".",".","Los Angeles",5,9141,5.47,1.78,12.76,"H",NA
+"PEDS","Childrens Hospital and Research Center at Oakland",".",".",140000014,".",".","Alameda",0,47499,0,0,0.63,"N",1.26
+"PEDS","Children's Hospital at Mission, Mission Viejo",".",".",60001207,".",".","Orange",0,8200,0,0,3.65,"N",1.2
+"PEDS","Children's Hospital Central California, Madera",".",".",40000129,".",".","Madera",1,72776,0.14,0,0.77,"N",1.46
+"PEDS","Childrens Hospital of Los Angeles",".",".",930000034,".",".","Los Angeles",1,102642,0.1,0,0.54,"N",1.84
+"PEDS","Children's Hospital of Orange County, Orange",".",".",60000007,".",".","Orange",1,59243,0.17,0,0.94,"N",1.38
+"PEDS","Earl & Loraine Miller Children's Hospital, Long Beach",".",".",930001709,".",".","Los Angeles",1,78645,0.13,0,0.71,"N",0.9
+"PEDS","Healthbridge Children's Hospital, Orange",".",".",60001674,".",".","Orange",0,1561,0,0,19.19,"N",0.97
+"PEDS","Lucile Salter Packard Children's Hospital at Stanford, Palo Alto",".",".",70001349,".",".","Santa Clara",2,125139,0.16,0.02,0.58,"N",1.43
+"PEDS","Rady Children's Hospital, San Diego",".",".",80000023,".",".","San Diego",1,80776,0.12,0,0.69,"N",1.5
+"PEDS","Shriners Hospitals for Children North CA, Sacramento",".",".",30001506,".",".","Sacramento",0,6362,0,0,4.71,"N",1.96
+"PEDS","Shriners Hospitals for Children, Los Angeles",".",".",930000141,".",".","Los Angeles",0,880,0,0,34.04,"N",1.32
+"PRIS","California Medical Facility, Vacaville",".",".",150000441,".",".","Solano",0,2042,0,0,14.67,"N",NA
+"PRIS","California Mens Colony, San Luis Obispo",".",".",170001888,".",".","San Luis Obispo",0,9108,0,0,3.29,"N",NA
+"PRIS","John D Klarich Memorial Hospital, CSP-Corcoran",".",".",170001879,".",".","Kings",0,23266,0,0,1.29,"N",NA
+"REHAB","Ballard Rehabilitation Hospital, San Bernardino",".",".",240001218,".",".","San Bernardino",0,15151,0,0,1.98,"N",1.12
+"REHAB","Casa Colina Hospital for Rehabilitative Medicine, Pomona",".",".",930000020,".",".","Los Angeles",NA,NA,NA,NA,NA,".",NA
+"REHAB","Healthsouth Bakersfield Rehabilitation Hospital",".",".",120000555,".",".","Kern",0,20835,0,0,1.44,"N",1.27
+"REHAB","Healthsouth Tustin Rehabilitation Hospital",".",".",60001097,".",".","Orange",0,15500,0,0,1.93,"N",1.25
+"REHAB","San Joaquin Valley Rehab Hospital, Fresno",".",".",40000613,".",".","Fresno",0,18230,0,0,1.64,"N",1.24
+"REHAB","The General Hospital, Eureka",".",".",110000069,".",".","Humboldt",0,2547,0,0,11.76,"N",NA

@@ -1,0 +1,14 @@
+This dataset contains information by licensed facility including number of 
+patient days, hospital discharges, licensed bed days, and intra-hospital 
+transfer from critical care by the six licensed bed classifications, 
+including General Acute Care, Chemical Dependency Recovery, Acute 
+Psychiatric, Skilled Nursing, Intermediate Care, and Intermediate 
+Care/Developmentally Disabled. The General Acute Care classification is 
+further defined by bed designation categories that include 
+Medical/Surgical (includes GYN/DOU), Perinatal (includes LDRP, excludes 
+nursery), Pediatric Acute, Intensive Care, Coronary Care, Acute 
+Respiratory Care, Burn Center, Intensive Care Newborn Nursery, and 
+Rehabilitation Center bed designations. 2015 data are preliminary, are as 
+reported and have not been audited. See the Healthcare Facility Bed Types 
+and Counts dataset for complimentary information at: 
+https://chhs.data.ca.gov/Facilities-and-Services/Healthcare-Facility-Bed-Types-And-Counts/f9pb-6m2b

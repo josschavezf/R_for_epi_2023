@@ -1,0 +1,177 @@
+﻿Date,Country,Case def.,Total cases,Cases last 21 days,Total deaths
+jan_06_2016,Guinea,Confirmed,3351,0,2083
+jan_06_2016,Guinea,Probable,453,,453
+jan_06_2016,Guinea,Suspected,0,,
+jan_06_2016,Guinea,All,3804,0,2536
+jan_06_2016,Liberia,Confirmed,3151,,
+jan_06_2016,Liberia,Probable,1879,,
+jan_06_2016,Liberia,Suspected,5636,,
+jan_06_2016,Liberia,All,10666,,4806
+jan_06_2016,Liberia2,Confirmed,9,0,3
+jan_06_2016,Liberia2,Probable,0,,
+jan_06_2016,Liberia2,Suspected,,,
+jan_06_2016,Liberia2,All,9,0,3
+jan_06_2016,Sierra Leone,Confirmed,8704,0,3589
+jan_06_2016,Sierra Leone,Probable,287,,208
+jan_06_2016,Sierra Leone,Suspected,5131,,158
+jan_06_2016,Sierra Leone,All,14122,0,3955
+jan_06_2016,Italy,Confirmed,1,,0
+jan_06_2016,Italy,Probable,0,,0
+jan_06_2016,Italy,Suspected,0,,0
+jan_06_2016,Italy,All,1,,0
+jan_06_2016,Mali,Confirmed,7,,
+jan_06_2016,Mali,Probable,1,,
+jan_06_2016,Mali,Suspected,0,,
+jan_06_2016,Mali,All,8,,6
+jan_06_2016,United Kingdom,Confirmed,1,,0
+jan_06_2016,United Kingdom,Probable,0,,0
+jan_06_2016,United Kingdom,Suspected,0,,0
+jan_06_2016,United Kingdom,All,1,,0
+jan_06_2016,United States of America,Confirmed,4,,1
+jan_06_2016,United States of America,Probable,0,,0
+jan_06_2016,United States of America,Suspected,0,,0
+jan_06_2016,United States of America,All,4,,1
+jan_06_2016,Nigeria,Confirmed,19,,7
+jan_06_2016,Nigeria,Probable,1,,1
+jan_06_2016,Nigeria,Suspected,0,,0
+jan_06_2016,Nigeria,All,20,,8
+jan_06_2016,Senegal,Confirmed,1,,0
+jan_06_2016,Senegal,Probable,0,,0
+jan_06_2016,Senegal,Suspected,0,,0
+jan_06_2016,Senegal,All,1,,0
+jan_06_2016,Spain,Confirmed,1,,0
+jan_06_2016,Spain,Probable,0,,0
+jan_06_2016,Spain,Suspected,0,,0
+jan_06_2016,Spain,All,1,,0
+dec_30_2015,Guinea,Confirmed,3351,0,2083
+dec_30_2015,Guinea,Probable,453,,453
+dec_30_2015,Guinea,Suspected,0,,
+dec_30_2015,Guinea,All,3804,0,2536
+dec_30_2015,Liberia,Confirmed,3151,,
+dec_30_2015,Liberia,Probable,1879,,
+dec_30_2015,Liberia,Suspected,5636,,
+dec_30_2015,Liberia,All,10666,,4806
+dec_30_2015,Liberia2,Confirmed,9,0,3
+dec_30_2015,Liberia2,Probable,0,,
+dec_30_2015,Liberia2,Suspected,,,
+dec_30_2015,Liberia2,All,9,0,3
+dec_30_2015,Sierra Leone,Confirmed,8704,0,3589
+dec_30_2015,Sierra Leone,Probable,287,,208
+dec_30_2015,Sierra Leone,Suspected,5131,,158
+dec_30_2015,Sierra Leone,All,14122,0,3955
+dec_30_2015,Italy,Confirmed,1,,0
+dec_30_2015,Italy,Probable,0,,0
+dec_30_2015,Italy,Suspected,0,,0
+dec_30_2015,Italy,All,1,,0
+dec_30_2015,Mali,Confirmed,7,,
+dec_30_2015,Mali,Probable,1,,
+dec_30_2015,Mali,Suspected,0,,
+dec_30_2015,Mali,All,8,,6
+dec_30_2015,United Kingdom,Confirmed,1,,0
+dec_30_2015,United Kingdom,Probable,0,,0
+dec_30_2015,United Kingdom,Suspected,0,,0
+dec_30_2015,United Kingdom,All,1,,0
+dec_30_2015,United States of America,Confirmed,4,,1
+dec_30_2015,United States of America,Probable,0,,0
+dec_30_2015,United States of America,Suspected,0,,0
+dec_30_2015,United States of America,All,4,,1
+dec_30_2015,Nigeria,Confirmed,19,,7
+dec_30_2015,Nigeria,Probable,1,,1
+dec_30_2015,Nigeria,Suspected,0,,0
+dec_30_2015,Nigeria,All,20,,8
+dec_30_2015,Senegal,Confirmed,1,,0
+dec_30_2015,Senegal,Probable,0,,0
+dec_30_2015,Senegal,Suspected,0,,0
+dec_30_2015,Senegal,All,1,,0
+dec_30_2015,Spain,Confirmed,1,,0
+dec_30_2015,Spain,Probable,0,,0
+dec_30_2015,Spain,Suspected,0,,0
+dec_30_2015,Spain,All,1,,0
+dec_23_2015,Guinea,Confirmed,3351,0,2083
+dec_23_2015,Guinea,Probable,453,,453
+dec_23_2015,Guinea,Suspected,0,,
+dec_23_2015,Guinea,All,3804,0,2536
+dec_23_2015,Liberia,Confirmed,3151,,
+dec_23_2015,Liberia,Probable,1879,,
+dec_23_2015,Liberia,Suspected,5636,,
+dec_23_2015,Liberia,All,10666,,4806
+dec_23_2015,Liberia2,Confirmed,9,0,3
+dec_23_2015,Liberia2,Probable,0,,
+dec_23_2015,Liberia2,Suspected,,,
+dec_23_2015,Liberia2,All,9,0,3
+dec_23_2015,Sierra Leone,Confirmed,8704,0,3589
+dec_23_2015,Sierra Leone,Probable,287,,208
+dec_23_2015,Sierra Leone,Suspected,5131,,158
+dec_23_2015,Sierra Leone,All,14122,0,3955
+dec_23_2015,Italy,Confirmed,1,,0
+dec_23_2015,Italy,Probable,0,,0
+dec_23_2015,Italy,Suspected,0,,0
+dec_23_2015,Italy,All,1,,0
+dec_23_2015,Mali,Confirmed,7,,
+dec_23_2015,Mali,Probable,1,,
+dec_23_2015,Mali,Suspected,0,,
+dec_23_2015,Mali,All,8,,6
+dec_23_2015,United Kingdom,Confirmed,1,,0
+dec_23_2015,United Kingdom,Probable,0,,0
+dec_23_2015,United Kingdom,Suspected,0,,0
+dec_23_2015,United Kingdom,All,1,,0
+dec_23_2015,United States of America,Confirmed,4,,1
+dec_23_2015,United States of America,Probable,0,,0
+dec_23_2015,United States of America,Suspected,0,,0
+dec_23_2015,United States of America,All,4,,1
+dec_23_2015,Nigeria,Confirmed,19,,7
+dec_23_2015,Nigeria,Probable,1,,1
+dec_23_2015,Nigeria,Suspected,0,,0
+dec_23_2015,Nigeria,All,20,,8
+dec_23_2015,Senegal,Confirmed,1,,0
+dec_23_2015,Senegal,Probable,0,,0
+dec_23_2015,Senegal,Suspected,0,,0
+dec_23_2015,Senegal,All,1,,0
+dec_23_2015,Spain,Confirmed,1,,0
+dec_23_2015,Spain,Probable,0,,0
+dec_23_2015,Spain,Suspected,0,,0
+dec_23_2015,Spain,All,1,,0
+dec_16_2015,Guinea,Confirmed,3351,0,2083
+dec_16_2015,Guinea,Probable,453,,453
+dec_16_2015,Guinea,Suspected,0,,
+dec_16_2015,Guinea,All,3804,0,2536
+dec_16_2015,Liberia,Confirmed,3151,,
+dec_16_2015,Liberia,Probable,1879,,
+dec_16_2015,Liberia,Suspected,5636,,
+dec_16_2015,Liberia,All,10666,,4806
+dec_16_2015,Liberia2,Confirmed,9,0,3
+dec_16_2015,Liberia2,Probable,0,,
+dec_16_2015,Liberia2,Suspected,,,
+dec_16_2015,Liberia2,All,9,0,3
+dec_16_2015,Sierra Leone,Confirmed,8704,0,3589
+dec_16_2015,Sierra Leone,Probable,287,,208
+dec_16_2015,Sierra Leone,Suspected,5131,,158
+dec_16_2015,Sierra Leone,All,14122,0,3955
+dec_16_2015,Italy,Confirmed,1,,0
+dec_16_2015,Italy,Probable,0,,0
+dec_16_2015,Italy,Suspected,0,,0
+dec_16_2015,Italy,All,1,,0
+dec_16_2015,Mali,Confirmed,7,,
+dec_16_2015,Mali,Probable,1,,
+dec_16_2015,Mali,Suspected,0,,
+dec_16_2015,Mali,All,8,,6
+dec_16_2015,United Kingdom,Confirmed,1,,0
+dec_16_2015,United Kingdom,Probable,0,,0
+dec_16_2015,United Kingdom,Suspected,0,,0
+dec_16_2015,United Kingdom,All,1,,0
+dec_16_2015,United States of America,Confirmed,4,,1
+dec_16_2015,United States of America,Probable,0,,0
+dec_16_2015,United States of America,Suspected,0,,0
+dec_16_2015,United States of America,All,4,,1
+dec_16_2015,Nigeria,Confirmed,19,,7
+dec_16_2015,Nigeria,Probable,1,,1
+dec_16_2015,Nigeria,Suspected,0,,0
+dec_16_2015,Nigeria,All,20,,8
+dec_16_2015,Senegal,Confirmed,1,,0
+dec_16_2015,Senegal,Probable,0,,0
+dec_16_2015,Senegal,Suspected,0,,0
+dec_16_2015,Senegal,All,1,,0
+dec_16_2015,Spain,Confirmed,1,,0
+dec_16_2015,Spain,Probable,0,,0
+dec_16_2015,Spain,Suspected,0,,0
+dec_16_2015,Spain,All,1,,0

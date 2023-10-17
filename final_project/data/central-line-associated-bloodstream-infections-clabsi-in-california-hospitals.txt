@@ -1,0 +1,37 @@
+his dataset includes central line-associated bloodstream infection 
+(CLABSI) data reported by California hospitals to the California 
+Department of Public Health, Healthcare-Associated Infections (HAI) 
+Program, via the Centers for Disease Control and Prevention (CDC) National 
+Healthcare Safety Network (NHSN). Hospital types include acute care, 
+critical access, long-term acute care, free-standing rehabilitation 
+hospitals, as well as acute rehabilitation units that report data 
+separately. CLABSI data for each hospital include the number of infections 
+observed (reported) and predicted (based on national baseline data), the 
+number of central line-days, the Standardized Infection Ratio (SIR) and 
+associated 95% confidence intervals, and statistical interpretation to 
+show whether CLABSI incidence was the same (no different), better (lower), 
+or worse (higher) than the national baseline. Another performance measure 
+in this dataset allows for tracking hospital progress in meeting national 
+HAI reduction goals. Hospitals must have an SIR at or below incremental 
+targets each year to be considered on track. California hospitals should 
+achieve 50% reductions in CLABSI from 2015 to 2020. Central line insertion 
+practices (CLIP) adherence percent for each hospital is calculated from 
+data reported by all critical care locations (i.e., critical care areas, 
+neonatal critical care, and one special care area, "Oncology - 
+Medical/Surgical Critical Care"). CLABSI SIRs are influenced by clinical 
+and infection control practices related to central line insertion and 
+infection control maintenance practices, patient-based risk factors, and 
+surveillance and reporting methods. Health and Safety Code section 
+1288.55(a)(2) requires general acute care hospitals to report to the 
+California Department of Public Health (CDPH) all cases of CLABSI 
+identified in their facilities. For general information about NHSN, 
+surveillance definitions, and reporting requirements for CLABSI, please 
+visit: https://www.cdc.gov/nhsn/index.html To link the CDPH facility IDs 
+with those from other Departments, including OSHPD, please reference the 
+"Licensed Facility Cross-Walk" Open Data table at: 
+https://data.chhs.ca.gov/dataset/licensed-facility-crosswalk For 
+information about healthcare-associated infection prevention progress in 
+California hospitals and statewide prevention goals, please visit: 
+https://www.cdph.ca.gov/Programs/CHCQ/HAI/Pages/AnnualHAIReports.aspx
+
+

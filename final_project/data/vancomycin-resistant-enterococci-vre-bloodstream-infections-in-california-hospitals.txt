@@ -1,0 +1,29 @@
+California Health and Safety Code section 1288.55(a)(1) requires general 
+acute care hospitals to report all cases of vancomycin-resistant 
+enterococci (VRE) bloodstream infections (BSI) to the California 
+Department of Public Health (CDPH). Hospitals report VRE data to CDPH via 
+the Centers for Disease Control and Prevention (CDC) National Healthcare 
+Safety Network (NHSN) following NHSN protocols and definitions. CDPH 
+downloads California hospital VRE BSI data from NHSN and analyzes the data 
+to describe prevention progress in an annual public report of 
+healthcare-associated infections. CDPH publishes annual VRE BSI data in 
+datasets that include the number of VRE BSI reported by each California 
+hospital in the specified reporting year and the hospital-onset VRE BSI 
+rate. The VRE BSI rate is calculated by dividing the number of cases by 
+the total number of patient days; the rate is then reported per 10,000 
+patient days. VRE BSI rates are not risk adjusted because there are no 
+such methods available at this time. Aggregate mean rates used for 
+comparisons are stratified by hospital type (and for community hospitals, 
+by bed size). The unadjusted VRE BSI rates herein are affected by the 
+clinical services provided, infection control practices, and surveillance 
+methods. Detailed information about the variables included in each dataset 
+are described in the accompanying data dictionaries for the year of 
+interest. For general information about NHSN, surveillance definitions, 
+and reporting requirements for VRE, please visit: 
+https://www.cdc.gov/nhsn/index.html To link the CDPH facility IDs with 
+those from other Departments, including OSHPD, please reference the 
+"Licensed Facility Cross-Walk" Open Data table at: 
+https://data.chhs.ca.gov/dataset/licensed-facility-crosswalk For 
+information about healthcare-associated infection prevention progress in 
+California hospitals and statewide prevention goals, please visit: 
+https://www.cdph.ca.gov/Programs/CHCQ/HAI/Pages/AnnualHAIReports.aspx

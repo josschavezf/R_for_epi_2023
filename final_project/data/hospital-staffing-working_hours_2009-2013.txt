@@ -1,0 +1,4 @@
+The dataset contains hours worked by hospital employee classification and 
+by hospital cost center groupings, as well as adjusted patient days for 
+all licensed, comparable hospitals in California. State mental hospitals 
+and psychiatric health facilities are excluded.
